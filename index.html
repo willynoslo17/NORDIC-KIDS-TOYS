@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nordic Kids & Toys</title>
+<style>
+:root{--bg:#f7f7f3;--ink:#111827;--muted:#6b7280;--line:#dde1e7;--card:#fff;--accent:#0f172a}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+nav{position:sticky;top:0;z-index:10;background:rgba(247,247,243,.94);backdrop-filter:blur(12px);display:flex;justify-content:space-between;align-items:center;padding:16px 5%;border-bottom:1px solid var(--line)}
+.brand{font-weight:900;letter-spacing:2px}.controls{display:flex;gap:8px}button,select{font:inherit}
+.ctrl,.chip{border:1px solid var(--line);background:white;padding:10px 12px;cursor:pointer}
+.hero{padding:72px 5%;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
+.hero h1{font-size:64px;line-height:.95;margin:10px 0}.hero p{color:var(--muted);font-size:18px;line-height:1.6}
+.heroart{height:380px;border-radius:30px;background:radial-gradient(circle at 30% 30%,#dbeafe,transparent 35%),radial-gradient(circle at 75% 40%,#fde68a,transparent 30%),radial-gradient(circle at 50% 80%,#dcfce7,transparent 30%),#fff;border:1px solid var(--line);display:grid;place-items:center;font-size:32px;font-weight:900}
+.section{padding:48px 5%}.section h2{font-size:38px;margin:0 0 20px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.chip.active{background:#111827;color:#fff}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+.visual{height:180px;display:grid;place-items:center;font-weight:900;font-size:22px;background:linear-gradient(135deg,#eef2ff,#fef3c7)}
+.body{padding:15px;display:flex;flex-direction:column;gap:8px;flex:1}.tag{font-size:11px;letter-spacing:1px;color:#64748b;text-transform:uppercase}.price{font-size:19px;font-weight:800}.add{margin-top:auto;background:#111827;color:#fff;border:0;padding:12px;cursor:pointer;font-weight:800}
+.market{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.m{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}.muted{color:var(--muted)}
+.drawer{position:fixed;right:0;top:0;height:100%;width:min(420px,100%);background:#fff;z-index:30;border-left:1px solid var(--line);transform:translateX(100%);transition:.25s;display:flex;flex-direction:column}.drawer.open{transform:none}.head,.foot{padding:18px;border-bottom:1px solid var(--line)}.bodycart{padding:18px;overflow:auto;flex:1}.item{padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}.checkout{width:100%;padding:13px;border:0;background:#111827;color:#fff;font-weight:800}
+@media(max-width:1000px){.products{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.hero{grid-template-columns:1fr}.hero h1{font-size:48px}.products,.market{grid-template-columns:1fr}}
+</style></head>
+<body>
+<nav><div class="brand">NORDIC KIDS & TOYS</div><div class="controls"><select id="market" class="ctrl"><option value="NO">🇳🇴 Norway</option><option value="EU">🇪🇺 Europe</option><option value="PE">🇵🇪 Perú</option></select><button id="cartBtn" class="ctrl">Cart (<span id="count">0</span>)</button></div></nav>
+<section class="hero"><div><div class="tag">SMART PLAY · LEARNING · FAMILY</div><h1>Play smarter. Grow happier.</h1><p>Juguetes educativos, creativos, STEM, outdoor, bebés, coleccionables y productos familiares adaptados a Noruega, Europa y Perú.</p><a href="#shop"><button class="ctrl" style="background:#111827;color:white;border-color:#111827">EXPLORE TOYS</button></a></div><div class="heroart">PLAY · LEARN · CREATE</div></section>
+<section class="section"><h2>Categorías</h2><div class="filters" id="filters"></div></section>
+<section class="section" id="shop"><h2>Productos destacados</h2><div class="products" id="products"></div></section>
+<section class="section"><h2>Una tienda, tres mercados</h2><div class="market"><div class="m"><b>🇳🇴 Norway</b><p class="muted">NOK · stock europeo prioritario · entrega estándar/express.</p></div><div class="m"><b>🇪🇺 Europe</b><p class="muted">EUR · almacenes europeos · entregas regionales.</p></div><div class="m"><b>🇵🇪 Perú</b><p class="muted">PEN · stock local cuando exista · rápida/COD si el proveedor lo permite.</p></div></div></section>
+<aside id="drawer" class="drawer"><div class="head"><b>Tu carrito</b><button class="ctrl" onclick="drawer.classList.remove('open')">Cerrar</button></div><div class="bodycart" id="cart"></div><div class="foot"><div style="display:flex;justify-content:space-between;font-size:20px;font-weight:800;margin-bottom:12px"><span>Total</span><span id="total">0</span></div><button class="checkout">CHECKOUT</button></div></aside>
+<script>
+const data=[
+{id:1,n:'STEM Robotics Starter Kit',c:'STEM',p:69},{id:2,n:'Magnetic Building Blocks',c:'Creative',p:39},{id:3,n:'Kids Learning Tablet',c:'Educational',p:89},{id:4,n:'Wooden Montessori Set',c:'Montessori',p:54},{id:5,n:'Remote Control Explorer Car',c:'RC',p:62},{id:6,n:'Family Board Game Pack',c:'Family',p:35},{id:7,n:'Outdoor Adventure Set',c:'Outdoor',p:48},{id:8,n:'Baby Sensory Play Kit',c:'Baby',p:42},{id:9,n:'3D Drawing Pen Kids',c:'Creative',p:49},{id:10,n:'Mini Science Lab',c:'STEM',p:58},{id:11,n:'Smart Story Projector',c:'Educational',p:79},{id:12,n:'Collectible Mystery Box',c:'Trending',p:29}
+];
+const cats=['All','STEM','Educational','Montessori','Creative','RC','Family','Outdoor','Baby','Trending'];
+const m={NO:{r:11.3,c:'NOK',l:'nb-NO'},EU:{r:1,c:'EUR',l:'en-IE'},PE:{r:4.05,c:'PEN',l:'es-PE'}};
+let market='NO',f='All',cart={};
+const $=s=>document.querySelector(s), money=x=>new Intl.NumberFormat(m[market].l,{style:'currency',currency:m[market].c,maximumFractionDigits:0}).format(x*m[market].r);
+function rf(){filters.innerHTML=cats.map(x=>`<button class="chip ${f===x?'active':''}" onclick="f='${x}';rf();rp()">${x}</button>`).join('')}
+function rp(){products.innerHTML=data.filter(x=>f==='All'||x.c===f).map(x=>`<div class="card"><div class="visual">${x.c}</div><div class="body"><div class="tag">${x.c}</div><b>${x.n}</b><div class="price">${money(x.p)}</div><div class="muted" style="font-size:12px">${market==='PE'?'Stock local prioritario donde esté disponible':'EU/EEA stock priority'}</div><button class="add" onclick="add(${x.id})">ADD TO CART</button></div></div>`).join('')}
+function add(id){cart[id]=(cart[id]||0)+1;rc();drawer.classList.add('open')}
+function rc(){let t=0,n=0;cart.innerHTML=Object.entries(cart).map(([id,q])=>{let x=data.find(a=>a.id==id);t+=x.p*q;n+=q;return `<div class="item"><span>${x.n} × ${q}</span><b>${money(x.p*q)}</b></div>`}).join('')||'<p class="muted">Carrito vacío.</p>';count.textContent=n;total.textContent=money(t)}
+market.onchange=e=>{market=e.target.value;rp();rc()};cartBtn.onclick=()=>drawer.classList.add('open');rf();rp();rc();
+</script>
+</body></html>
