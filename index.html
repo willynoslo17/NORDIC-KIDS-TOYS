@@ -29,7 +29,8 @@ nav{position:sticky;top:0;z-index:10;background:rgba(247,247,243,.94);backdrop-f
 <section class="section"><h2>Una tienda, tres mercados</h2><div class="market"><div class="m"><b>🇳🇴 Norway</b><p class="muted">NOK · stock europeo prioritario · entrega estándar/express.</p></div><div class="m"><b>🇪🇺 Europe</b><p class="muted">EUR · almacenes europeos · entregas regionales.</p></div><div class="m"><b>🇵🇪 Perú</b><p class="muted">PEN · stock local cuando exista · rápida/COD si el proveedor lo permite.</p></div></div></section>
 <aside id="drawer" class="drawer"><div class="head"><b>Tu carrito</b><button class="ctrl" onclick="drawer.classList.remove('open')">Cerrar</button></div><div class="bodycart" id="cart"></div><div class="foot"><div style="display:flex;justify-content:space-between;font-size:20px;font-weight:800;margin-bottom:12px"><span>Total</span><span id="total">0</span></div><button class="checkout">CHECKOUT</button></div></aside>
 <script>
-const data=[
+let data=
+[
 {id:1,n:'STEM Robotics Starter Kit',c:'STEM',p:69},{id:2,n:'Magnetic Building Blocks',c:'Creative',p:39},{id:3,n:'Kids Learning Tablet',c:'Educational',p:89},{id:4,n:'Wooden Montessori Set',c:'Montessori',p:54},{id:5,n:'Remote Control Explorer Car',c:'RC',p:62},{id:6,n:'Family Board Game Pack',c:'Family',p:35},{id:7,n:'Outdoor Adventure Set',c:'Outdoor',p:48},{id:8,n:'Baby Sensory Play Kit',c:'Baby',p:42},{id:9,n:'3D Drawing Pen Kids',c:'Creative',p:49},{id:10,n:'Mini Science Lab',c:'STEM',p:58},{id:11,n:'Smart Story Projector',c:'Educational',p:79},{id:12,n:'Collectible Mystery Box',c:'Trending',p:29}
 ];
 const cats=['All','STEM','Educational','Montessori','Creative','RC','Family','Outdoor','Baby','Trending'];
@@ -42,4 +43,6 @@ function add(id){cart[id]=(cart[id]||0)+1;rc();drawer.classList.add('open')}
 function rc(){let t=0,n=0;cart.innerHTML=Object.entries(cart).map(([id,q])=>{let x=data.find(a=>a.id==id);t+=x.p*q;n+=q;return `<div class="item"><span>${x.n} × ${q}</span><b>${money(x.p*q)}</b></div>`}).join('')||'<p class="muted">Carrito vacío.</p>';count.textContent=n;total.textContent=money(t)}
 market.onchange=e=>{market=e.target.value;rp();rc()};cartBtn.onclick=()=>drawer.classList.add('open');rf();rp();rc();
 </script>
+
+<script src="supplier-bridge.js"></script><script>showGermanDropStatus(true);loadNordicCatalog({query:"toys",category:"Educational"}).then(live=>{if(live.length){data=live.map(x=>({id:x.id,n:x.name,c:x.cat,p:x.base}));f='All';rf();rp();rc()}});</script>
 </body></html>

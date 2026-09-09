@@ -1,0 +1,13 @@
+{
+  "store": "kids",
+  "cjDropshipping": {
+    "enabled": true,
+    "query": "toys",
+    "catalogMode": "live-with-local-fallback"
+  },
+  "germanDrop": {
+    "enabled": true,
+    "mode": "authorized-manual-catalog"
+  },
+  "markets": ["NO", "EU", "PE"]
+}
