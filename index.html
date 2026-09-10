@@ -45,5 +45,6 @@ document.getElementById('market').onchange=e=>{marketCode=e.target.value;rp();rc
 </script>
 
 <script src="supplier-bridge.js"></script><script>showGermanDropStatus(true);loadNordicCatalog({query:"toys",category:"Educational"}).then(live=>{if(live.length){data=live.map(x=>({id:x.id,n:x.name,c:x.cat,p:x.base,image:x.image,sku:x.sku}));f='All';rf();rp();rc()}});</script>
+<form name="nordic-order" data-netlify="true" netlify-honeypot="bot-field" hidden><input name="bot-field"><input name="store"><input name="order_id"><input name="market"><input name="name"><input name="email"><input name="phone"><input name="city"><input name="address"><input name="country"><textarea name="items"></textarea><input name="consent"></form>
 <script src="commerce-runtime.js"></script>
 </body></html>
