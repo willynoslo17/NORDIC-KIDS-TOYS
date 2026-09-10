@@ -35,14 +35,15 @@ let data=
 ];
 const cats=['All','STEM','Educational','Montessori','Creative','RC','Family','Outdoor','Baby','Trending'];
 const m={NO:{r:11.3,c:'NOK',l:'nb-NO'},EU:{r:1,c:'EUR',l:'en-IE'},PE:{r:4.05,c:'PEN',l:'es-PE'}};
-let market='NO',f='All',cart={};
-const $=s=>document.querySelector(s), money=x=>new Intl.NumberFormat(m[market].l,{style:'currency',currency:m[market].c,maximumFractionDigits:0}).format(x*m[market].r);
+let marketCode='NO',f='All',cartState={};
+const $=s=>document.querySelector(s), money=x=>new Intl.NumberFormat(m[marketCode].l,{style:'currency',currency:m[marketCode].c,maximumFractionDigits:0}).format(x*m[marketCode].r);
 function rf(){filters.innerHTML=cats.map(x=>`<button class="chip ${f===x?'active':''}" onclick="f='${x}';rf();rp()">${x}</button>`).join('')}
-function rp(){products.innerHTML=data.filter(x=>f==='All'||x.c===f).map(x=>`<div class="card"><div class="visual">${x.image?'<img src="'+x.image+'" alt="'+x.n+'" loading="lazy" style="width:100%;height:100%;object-fit:cover">':x.c}</div><div class="body"><div class="tag">${x.c}</div><b>${x.n}</b><div class="price">${money(x.p)}</div><div class="muted" style="font-size:12px">${market==='PE'?'Stock local prioritario donde esté disponible':'EU/EEA stock priority'}</div><button class="add" onclick="add(${x.id})">ADD TO CART</button></div></div>`).join('')}
-function add(id){cart[id]=(cart[id]||0)+1;rc();drawer.classList.add('open')}
-function rc(){let t=0,n=0;cart.innerHTML=Object.entries(cart).map(([id,q])=>{let x=data.find(a=>a.id==id);t+=x.p*q;n+=q;return `<div class="item"><span>${x.n} × ${q}</span><b>${money(x.p*q)}</b></div>`}).join('')||'<p class="muted">Carrito vacío.</p>';count.textContent=n;total.textContent=money(t)}
-market.onchange=e=>{market=e.target.value;rp();rc()};cartBtn.onclick=()=>drawer.classList.add('open');rf();rp();rc();
+function rp(){products.innerHTML=data.filter(x=>f==='All'||x.c===f).map(x=>`<div class="card"><div class="visual">${x.image?'<img src="'+x.image+'" alt="'+x.n+'" loading="lazy" style="width:100%;height:100%;object-fit:cover">':x.c}</div><div class="body"><div class="tag">${x.c}</div><b>${x.n}</b><div class="price">${money(x.p)}</div><div class="muted" style="font-size:12px">${marketCode==='PE'?'Stock local prioritario donde esté disponible':'EU/EEA stock priority'}</div><button class="add" onclick="add(${x.id})">ADD TO CART</button></div></div>`).join('')}
+function add(id){cartState[id]=(cartState[id]||0)+1;rc();drawer.classList.add('open')}
+function rc(){let t=0,n=0;document.getElementById('cart').innerHTML=Object.entries(cartState).map(([id,q])=>{let x=data.find(a=>a.id==id);t+=x.p*q;n+=q;return `<div class="item"><span>${x.n} × ${q}</span><b>${money(x.p*q)}</b></div>`}).join('')||'<p class="muted">Carrito vacío.</p>';count.textContent=n;total.textContent=money(t)}
+document.getElementById('market').onchange=e=>{marketCode=e.target.value;rp();rc()};cartBtn.onclick=()=>drawer.classList.add('open');rf();rp();rc();
 </script>
 
-<script src="supplier-bridge.js"></script><script>showGermanDropStatus(true);loadNordicCatalog({query:"toys",category:"Educational"}).then(live=>{if(live.length){data=live.map(x=>({id:x.id,n:x.name,c:x.cat,p:x.base,image:x.image}));f='All';rf();rp();rc()}});</script>
+<script src="supplier-bridge.js"></script><script>showGermanDropStatus(true);loadNordicCatalog({query:"toys",category:"Educational"}).then(live=>{if(live.length){data=live.map(x=>({id:x.id,n:x.name,c:x.cat,p:x.base,image:x.image,sku:x.sku}));f='All';rf();rp();rc()}});</script>
+<script src="commerce-runtime.js"></script>
 </body></html>
