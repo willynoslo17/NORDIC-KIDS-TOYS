@@ -1,95 +1,259 @@
-const PRODUCT_BASE = "https://product.gelatoapis.com";
-const ECOM_BASE = "https://ecommerce.gelatoapis.com";
+const SELECTED: any[] = [
+  {
+    "id": "gelato-toys-1",
+    "sku": "GEL-KIDS-POSTER-ABC",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "ABC Adventure Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-2",
+    "sku": "GEL-KIDS-POSTER-SPACE",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Solar System Kids Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-3",
+    "sku": "GEL-KIDS-POSTER-ANIMALS",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Nordic Animals Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 20.9,
+    "image": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-4",
+    "sku": "GEL-KIDS-POSTER-COUNT",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Counting Forest Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 19.9,
+    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-5",
+    "sku": "GEL-KIDS-TEE-EXPLORE",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Little Explorer Kids Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.9,
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-6",
+    "sku": "GEL-KIDS-TEE-PLAY",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Play Mode On T-Shirt",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.9,
+    "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad0?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-7",
+    "sku": "GEL-KIDS-TEE-STORY",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Storytime Hero Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-8",
+    "sku": "GEL-KIDS-TEE-RAINBOW",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Rainbow Crew Kids Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-9",
+    "sku": "GEL-KIDS-POSTER-BUILD",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Build & Learn Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 18.9,
+    "image": "https://images.unsplash.com/photo-1587654780291-39c9404d745b?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-10",
+    "sku": "GEL-KIDS-POSTER-DINO",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Dinosaurs Dino Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 21.5,
+    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-11",
+    "sku": "GEL-KIDS-TEE-MAKER",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Future Maker Kids Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 25.9,
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-12",
+    "sku": "GEL-KIDS-POSTER-DREAM",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Bedtime Dreams Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 19.5,
+    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-13",
+    "sku": "GEL-KIDS-POSTER-OCEAN",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Ocean Friends Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 20.5,
+    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-14",
+    "sku": "GEL-KIDS-TEE-SCIENCE",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Little Scientist Kids Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-15",
+    "sku": "GEL-KIDS-POSTER-SHAPES",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Shapes & Colors Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 19.5,
+    "image": "https://images.unsplash.com/photo-1587654780291-39c9404d745b?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  }
+];
 
-const SECTOR_KEYWORDS: Record<string, string[]> = {
-  "beauty": [
-    "beauty",
-    "perfume",
-    "skincare",
-    "cosmetic",
-    "glow",
-    "tote",
-    "t-shirt",
-    "tee",
-    "mug",
-    "crewneck"
-  ],
-  "toys": [
-    "toy",
-    "kid",
-    "kids",
-    "child",
-    "poster",
-    "t-shirt",
-    "tee",
-    "educational",
-    "abc"
-  ],
-  "electronics": [
-    "tech",
-    "electronic",
-    "phone",
-    "case",
-    "tough",
-    "gadget",
-    "circuit",
-    "debug"
-  ],
-  "pet supplies": [
-    "pet",
-    "dog",
-    "cat",
-    "paw",
-    "tote",
-    "t-shirt",
-    "tee",
-    "animal"
-  ],
-  "home living": [
-    "home",
-    "living",
-    "decor",
-    "hygge",
-    "tote",
-    "poster",
-    "mug",
-    "kitchen",
-    "pillow"
-  ],
-  "fitness": [
-    "fitness",
-    "outdoor",
-    "trail",
-    "sport",
-    "hoodie",
-    "zip",
-    "t-shirt",
-    "tee",
-    "crewneck",
-    "gym"
-  ],
-  "solar energy": [
-    "solar",
-    "energy",
-    "watt",
-    "green",
-    "tote",
-    "poster",
-    "clean",
-    "eco"
-  ],
-  "car accessories": [
-    "car",
-    "auto",
-    "driver",
-    "garage",
-    "cap",
-    "hat",
-    "hoodie",
-    "zip",
-    "mobility",
-    "route"
-  ]
+const SECTOR_ALIASES: Record<string, string> = {
+  "beauty": "beauty",
+  "perfume": "beauty",
+  "perfumes": "beauty",
+  "skincare": "beauty",
+  "toys": "toys",
+  "kids": "toys",
+  "kid": "toys",
+  "children": "toys",
+  "electronics": "electronics",
+  "tech": "electronics",
+  "technology": "electronics",
+  "pet supplies": "pet supplies",
+  "pets": "pet supplies",
+  "pet": "pet supplies",
+  "home living": "home living",
+  "home": "home living",
+  "living": "home living",
+  "fitness": "fitness",
+  "outdoor": "fitness",
+  "sports": "fitness",
+  "solar energy": "solar energy",
+  "energy": "solar energy",
+  "solar": "solar energy",
+  "car accessories": "car accessories",
+  "car": "car accessories",
+  "auto": "car accessories",
+  "automotive": "car accessories"
 };
 
 function money(value: unknown) {
@@ -97,77 +261,52 @@ function money(value: unknown) {
   return Number.isFinite(amount) && amount > 0 ? Math.round(amount * 100) / 100 : 0;
 }
 
-function normalizeEcom(product: any, index: number) {
-  const retail = money(
-    product?.price?.basePrice ?? product?.price?.amount ?? product?.price ?? product?.suggestedRetailUsd ?? product?.retailPrice
-  );
-  return {
-    id: String(product?.id || product?.productUid || `gelato-${index}`),
-    sku: String(product?.sku || product?.productUid || product?.id || ""),
-    supplier: "Gelato",
-    provider: "gelato",
-    name: String(product?.title || product?.name || "Gelato product"),
-    category: String(product?.category || "Gelato"),
-    supplierPriceUsd: retail,
-    suggestedRetailUsd: retail,
-    image: String(product?.previewUrl || product?.imageUrl || product?.image || product?.thumbnailUrl || ""),
-  };
+function resolveSector(raw: string) {
+  const key = String(raw || "").toLowerCase().trim();
+  if (!key) return SELECTED[0]?.sector || "beauty";
+  if (SECTOR_ALIASES[key]) return SECTOR_ALIASES[key];
+  for (const [alias, sector] of Object.entries(SECTOR_ALIASES)) {
+    if (key.includes(alias) || alias.includes(key)) return sector;
+  }
+  return key;
 }
 
-function matchesSector(p: any, sector: string) {
-  const keys = SECTOR_KEYWORDS[sector] || SECTOR_KEYWORDS.beauty;
-  const text = [p.name, p.category, p.sku].join(" ").toLowerCase();
-  return keys.some((k) => text.includes(k));
-}
-
-async function loadStoreProducts(headers: Record<string, string>, storeId: string) {
-  const response = await fetch(`${ECOM_BASE}/v1/stores/${storeId}/products`, { headers });
-  const result: any = await response.json().catch(() => ({}));
-  if (!response.ok) return [];
-  const list = Array.isArray(result?.products) ? result.products : Array.isArray(result) ? result : [];
-  return list.map(normalizeEcom).filter((p: any) => p.suggestedRetailUsd > 0);
+function curated(sector: string) {
+  return SELECTED
+    .filter((p) => !p.sector || String(p.sector).toLowerCase() === sector)
+    .map((p, i) => ({
+      id: String(p.id || `gelato-selected-${i}`),
+      sku: String(p.sku || ""),
+      supplier: "Gelato",
+      provider: "gelato",
+      name: String(p.name || "Gelato product"),
+      category: String(p.category || sector),
+      supplierPriceUsd: money(p.supplierPriceUsd) || money(p.suggestedRetailUsd),
+      suggestedRetailUsd: money(p.suggestedRetailUsd) || money(p.supplierPriceUsd),
+      image: String(p.image || ""),
+      sector: String(p.sector || sector),
+    }))
+    .filter((p) => p.suggestedRetailUsd > 0 && p.name);
 }
 
 export async function onRequestGet(context: any) {
-  const apiKey = context.env.GELATO_API_KEY;
   const url = new URL(context.request.url);
-  const wanted = (url.searchParams.get("q") || url.searchParams.get("sector") || "beauty").toLowerCase().trim();
-  const sector = SECTOR_KEYWORDS[wanted] ? wanted : "beauty";
-  const headersOut = { "access-control-allow-origin": "*", "cache-control": "public, max-age=300" };
-  if (!apiKey) return Response.json({ error: "Gelato is not configured", products: [], sector, query: sector }, { status: 503, headers: headersOut });
-  const headers = { "X-API-KEY": apiKey, "content-type": "application/json" };
-  try {
-    let storeId = context.env.GELATO_STORE_ID || "";
-    if (!storeId) {
-      const storesRes = await fetch(`${ECOM_BASE}/v1/stores`, { headers });
-      if (storesRes.ok) {
-        const stores: any = await storesRes.json();
-        const list = Array.isArray(stores?.stores) ? stores.stores : Array.isArray(stores) ? stores : [];
-        storeId = String(list[0]?.id || list[0]?.storeId || "");
-      }
-    }
-    if (storeId) {
-      let products = await loadStoreProducts(headers, storeId);
-      const filtered = products.filter((p) => matchesSector(p, sector));
-      if (filtered.length >= 1) products = filtered;
-      products = products.slice(0, 30);
-      return Response.json({ ok: true, supplier: "gelato", sector, query: sector, products, storeId, markets: ["NO", "EU", "PE"] }, { headers: headersOut });
-    }
-    const catalogsRes = await fetch(`${PRODUCT_BASE}/v3/catalogs`, { headers });
-    if (!catalogsRes.ok) {
-      const err: any = await catalogsRes.json().catch(() => ({}));
-      return Response.json({ error: err?.message || "Gelato request failed", products: [] }, { status: 502, headers: headersOut });
-    }
-    return Response.json({
+  const wanted = url.searchParams.get("q") || url.searchParams.get("sector") || "";
+  const defaultSector = String(SELECTED[0]?.sector || "beauty");
+  const sector = resolveSector(wanted || defaultSector);
+  const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
+  const products = curated(sector).slice(0, 30);
+  return Response.json(
+    {
       ok: true,
       supplier: "gelato",
       sector,
       query: sector,
-      products: [],
-      note: "API key valid. Add ecommerce store products in Gelato (or set GELATO_STORE_ID) for a live priced catalog.",
+      products,
+      count: products.length,
+      source: "gelato-selected-primary",
       markets: ["NO", "EU", "PE"],
-    }, { headers: headersOut });
-  } catch (error) {
-    return Response.json({ error: error instanceof Error ? error.message : "Gelato request failed", products: [] }, { status: 502, headers: headersOut });
-  }
+    },
+    { status: products.length ? 200 : 503, headers }
+  );
 }

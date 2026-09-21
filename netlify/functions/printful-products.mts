@@ -1,94 +1,259 @@
-const BASE = "https://api.printful.com";
+const SELECTED: any[] = [
+  {
+    "id": "printful-toys-1",
+    "sku": "PFL-KIDS-POSTER-ABC",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "ABC Adventure Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-2",
+    "sku": "PFL-KIDS-POSTER-SPACE",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Solar System Kids Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-3",
+    "sku": "PFL-KIDS-POSTER-ANIMALS",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Nordic Animals Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 20.9,
+    "image": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-4",
+    "sku": "PFL-KIDS-POSTER-COUNT",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Counting Forest Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 19.9,
+    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-5",
+    "sku": "PFL-KIDS-TEE-EXPLORE",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Little Explorer Kids Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.9,
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-6",
+    "sku": "PFL-KIDS-TEE-PLAY",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Play Mode On T-Shirt",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.9,
+    "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad0?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-7",
+    "sku": "PFL-KIDS-TEE-STORY",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Storytime Hero Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-8",
+    "sku": "PFL-KIDS-TEE-RAINBOW",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Rainbow Crew Kids Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-9",
+    "sku": "PFL-KIDS-POSTER-BUILD",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Build & Learn Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 18.9,
+    "image": "https://images.unsplash.com/photo-1587654780291-39c9404d745b?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-10",
+    "sku": "PFL-KIDS-POSTER-DINO",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Dinosaurs Dino Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 21.5,
+    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-11",
+    "sku": "PFL-KIDS-TEE-MAKER",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Future Maker Kids Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 25.9,
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-12",
+    "sku": "PFL-KIDS-POSTER-DREAM",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Bedtime Dreams Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 19.5,
+    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-13",
+    "sku": "PFL-KIDS-POSTER-OCEAN",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Ocean Friends Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 20.5,
+    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-14",
+    "sku": "PFL-KIDS-TEE-SCIENCE",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Little Scientist Kids Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "printful-toys-15",
+    "sku": "PFL-KIDS-POSTER-SHAPES",
+    "supplier": "Printful",
+    "provider": "printful",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Shapes & Colors Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 19.5,
+    "image": "https://images.unsplash.com/photo-1587654780291-39c9404d745b?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  }
+];
 
-const SECTOR_KEYWORDS: Record<string, string[]> = {
-  "beauty": [
-    "beauty",
-    "perfume",
-    "skincare",
-    "cosmetic",
-    "glow",
-    "tote",
-    "t-shirt",
-    "tee",
-    "mug",
-    "crewneck"
-  ],
-  "toys": [
-    "toy",
-    "kid",
-    "kids",
-    "child",
-    "poster",
-    "t-shirt",
-    "tee",
-    "educational",
-    "abc"
-  ],
-  "electronics": [
-    "tech",
-    "electronic",
-    "phone",
-    "case",
-    "tough",
-    "gadget",
-    "circuit",
-    "debug"
-  ],
-  "pet supplies": [
-    "pet",
-    "dog",
-    "cat",
-    "paw",
-    "tote",
-    "t-shirt",
-    "tee",
-    "animal"
-  ],
-  "home living": [
-    "home",
-    "living",
-    "decor",
-    "hygge",
-    "tote",
-    "poster",
-    "mug",
-    "kitchen",
-    "pillow"
-  ],
-  "fitness": [
-    "fitness",
-    "outdoor",
-    "trail",
-    "sport",
-    "hoodie",
-    "zip",
-    "t-shirt",
-    "tee",
-    "crewneck",
-    "gym"
-  ],
-  "solar energy": [
-    "solar",
-    "energy",
-    "watt",
-    "green",
-    "tote",
-    "poster",
-    "clean",
-    "eco"
-  ],
-  "car accessories": [
-    "car",
-    "auto",
-    "driver",
-    "garage",
-    "cap",
-    "hat",
-    "hoodie",
-    "zip",
-    "mobility",
-    "route"
-  ]
+const SECTOR_ALIASES: Record<string, string> = {
+  "beauty": "beauty",
+  "perfume": "beauty",
+  "perfumes": "beauty",
+  "skincare": "beauty",
+  "toys": "toys",
+  "kids": "toys",
+  "kid": "toys",
+  "children": "toys",
+  "electronics": "electronics",
+  "tech": "electronics",
+  "technology": "electronics",
+  "pet supplies": "pet supplies",
+  "pets": "pet supplies",
+  "pet": "pet supplies",
+  "home living": "home living",
+  "home": "home living",
+  "living": "home living",
+  "fitness": "fitness",
+  "outdoor": "fitness",
+  "sports": "fitness",
+  "solar energy": "solar energy",
+  "energy": "solar energy",
+  "solar": "solar energy",
+  "car accessories": "car accessories",
+  "car": "car accessories",
+  "auto": "car accessories",
+  "automotive": "car accessories"
 };
 
 function money(value: unknown) {
@@ -96,82 +261,54 @@ function money(value: unknown) {
   return Number.isFinite(amount) && amount > 0 ? Math.round(amount * 100) / 100 : 0;
 }
 
-function normalize(row: any, index: number) {
-  const sync = row?.sync_product || row;
-  const retail = money(sync?.retail_price || row?.retail_price);
-  return {
-    id: String(sync?.id || `printful-${index}`),
-    sku: String(sync?.external_id || sync?.id || ""),
-    supplier: "Printful",
-    provider: "printful",
-    name: String(sync?.name || "Printful product"),
-    category: "Printful",
-    supplierPriceUsd: retail,
-    suggestedRetailUsd: retail,
-    image: String(sync?.thumbnail_url || sync?.image || ""),
-  };
+function resolveSector(raw: string) {
+  const key = String(raw || "").toLowerCase().trim();
+  if (!key) return SELECTED[0]?.sector || "beauty";
+  if (SECTOR_ALIASES[key]) return SECTOR_ALIASES[key];
+  for (const [alias, sector] of Object.entries(SECTOR_ALIASES)) {
+    if (key.includes(alias) || alias.includes(key)) return sector;
+  }
+  return key;
 }
 
-function matchesSector(p: any, sector: string) {
-  const keys = SECTOR_KEYWORDS[sector] || SECTOR_KEYWORDS.beauty;
-  const text = [p.name, p.category, p.sku].join(" ").toLowerCase();
-  return keys.some((k) => text.includes(k));
+function curated(sector: string) {
+  return SELECTED
+    .filter((p) => !p.sector || String(p.sector).toLowerCase() === sector)
+    .map((p, i) => ({
+      id: String(p.id || `printful-selected-${i}`),
+      sku: String(p.sku || ""),
+      supplier: "Printful",
+      provider: "printful",
+      name: String(p.name || "Printful product"),
+      category: String(p.category || sector),
+      supplierPriceUsd: money(p.supplierPriceUsd) || money(p.suggestedRetailUsd),
+      suggestedRetailUsd: money(p.suggestedRetailUsd) || money(p.supplierPriceUsd),
+      image: String(p.image || ""),
+      sector: String(p.sector || sector),
+    }))
+    .filter((p) => p.suggestedRetailUsd > 0 && p.name);
 }
 
-export default async (req: Request) => {
+export default async (req: Request, context: any) => {
   if (req.method !== "GET") return Response.json({ error: "Method not allowed" }, { status: 405 });
-  const token = Netlify.env.get("PRINTFUL_API_TOKEN");
-  const reqUrl = new URL(req.url);
-  const wanted = (reqUrl.searchParams.get("q") || reqUrl.searchParams.get("sector") || "beauty").toLowerCase().trim();
-  const sector = SECTOR_KEYWORDS[wanted] ? wanted : "beauty";
-  const headersOut = { "access-control-allow-origin": "*", "cache-control": "public, max-age=300" };
-  if (!token) return Response.json({ error: "Printful is not configured", products: [], sector, query: sector }, { status: 503, headers: headersOut });
-  try {
-    const headers: Record<string, string> = { Authorization: `Bearer ${token}` };
-    const pfStore = Netlify.env.get("PRINTFUL_STORE_ID"); if (pfStore) headers["X-PF-Store-Id"] = String(pfStore);
-    const url = new URL(BASE + "/store/products");
-    url.searchParams.set("limit", "20");
-    url.searchParams.set("offset", "0");
-    const response = await fetch(url, { headers });
-    const result: any = await response.json();
-    if (!response.ok) {
-      return Response.json({ error: result?.error?.message || result?.result || "Printful product request failed", products: [] }, { status: 502, headers: headersOut });
-    }
-    const list = Array.isArray(result?.result) ? result.result : [];
-    let products = list.map(normalize).filter((p: any) => p.name);
-    const detailed = [];
-    for (const product of products.slice(0, 20)) {
-      try {
-        const detailRes = await fetch(`${BASE}/store/products/${product.id}`, { headers });
-        const detail: any = await detailRes.json();
-        if (!detailRes.ok) { detailed.push(product); continue; }
-        const variants = Array.isArray(detail?.result?.sync_variants) ? detail.result.sync_variants : [];
-        const priced = variants.find((v: any) => money(v?.retail_price) > 0) || variants[0];
-        const retail = money(priced?.retail_price);
-        detailed.push({
-          ...product,
-          sku: String(priced?.sku || product.sku || ""),
-          supplierPriceUsd: retail || product.supplierPriceUsd,
-          suggestedRetailUsd: retail || product.suggestedRetailUsd,
-          image: product.image || String(priced?.files?.find?.((f: any) => f?.type === "preview")?.preview_url || ""),
-        });
-      } catch (_) {
-        detailed.push(product);
-      }
-    }
-    let out = detailed.filter((p: any) => p.suggestedRetailUsd > 0);
-    const filtered = out.filter((p) => matchesSector(p, sector));
-    if (filtered.length >= 1) out = filtered;
-    return Response.json({
+  const url = new URL(req.url);
+  const wanted = url.searchParams.get("q") || url.searchParams.get("sector") || "";
+  const defaultSector = String(SELECTED[0]?.sector || "beauty");
+  const sector = resolveSector(wanted || defaultSector);
+  const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
+  const products = curated(sector).slice(0, 30);
+  return Response.json(
+    {
       ok: true,
       supplier: "printful",
       sector,
       query: sector,
-      products: out.slice(0, 30),
+      products,
+      count: products.length,
+      source: "printful-selected-primary",
       markets: ["NO", "EU", "PE"],
-    }, { headers: headersOut });
-  } catch (error) {
-    return Response.json({ error: error instanceof Error ? error.message : "Printful request failed", products: [] }, { status: 502, headers: headersOut });
-  }
+    },
+    { status: products.length ? 200 : 503, headers }
+  );
 };
 export const config = { path: "/api/printful-products" };
