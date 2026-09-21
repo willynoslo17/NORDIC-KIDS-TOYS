@@ -1,5 +1,4 @@
 const BASE = "https://api.printify.com/v1";
-
 const SELECTED: any[] = [
   {
     "id": "printify-toys-1",
@@ -14,7 +13,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 21.9,
     "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-2",
@@ -29,7 +29,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 22.9,
     "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-3",
@@ -44,7 +45,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 20.9,
     "image": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-4",
@@ -59,7 +61,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 19.9,
     "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-5",
@@ -74,7 +77,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 24.9,
     "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-6",
@@ -89,7 +93,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 23.9,
     "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad0?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-7",
@@ -104,7 +109,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 22.9,
     "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-8",
@@ -119,7 +125,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 21.9,
     "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-9",
@@ -134,7 +141,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 18.9,
     "image": "https://images.unsplash.com/photo-1587654780291-39c9404d745b?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-10",
@@ -149,7 +157,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 21.5,
     "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-11",
@@ -164,7 +173,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 25.9,
     "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-12",
@@ -179,7 +189,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 19.5,
     "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-13",
@@ -194,7 +205,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 20.5,
     "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-14",
@@ -209,7 +221,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 24.5,
     "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-15",
@@ -224,7 +237,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 19.5,
     "image": "https://images.unsplash.com/photo-1587654780291-39c9404d745b?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-16",
@@ -239,7 +253,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 21.5,
     "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-17",
@@ -254,7 +269,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 23.5,
     "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-18",
@@ -269,7 +285,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 20.5,
     "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-19",
@@ -284,7 +301,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 22.5,
     "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad0?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-20",
@@ -299,7 +317,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 22.9,
     "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-21",
@@ -314,7 +333,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 24.5,
     "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-22",
@@ -329,7 +349,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 19.9,
     "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-23",
@@ -344,7 +365,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 21.9,
     "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-24",
@@ -359,7 +381,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 23.9,
     "image": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   },
   {
     "id": "printify-toys-25",
@@ -374,10 +397,410 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 25.5,
     "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-26",
+    "sku": "PFY-KIDS-POSTER-FOREST",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Forest Friends Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-27",
+    "sku": "PFY-KIDS-TEE-READER",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Little Reader Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-28",
+    "sku": "PFY-KIDS-POSTER-NUMBERS",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Numbers Trail Educational Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 20.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-29",
+    "sku": "PFY-KIDS-TEE-CUB",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Curious Cub Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-30",
+    "sku": "PFY-KIDS-POSTER-SEASONS",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Nordic Seasons Kids Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 22.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-31",
+    "sku": "PFY-KIDS-TEE-KIND2",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Kind Heart Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 21.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-32",
+    "sku": "PFY-KIDS-POSTER-STARS",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Star Map Kids Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-33",
+    "sku": "PFY-KIDS-TEE-TRAIL",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Trail Buddy Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-34",
+    "sku": "PFY-KIDS-POSTER-COLORS",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Colors of the Fjord Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 19.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-35",
+    "sku": "PFY-KIDS-TEE-STORY2",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Story Hour Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 22.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-36",
+    "sku": "PFY-KIDS-POSTER-ALPHA2",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Animal Alphabet Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 23.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-37",
+    "sku": "PFY-KIDS-TEE-BRAVE",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Brave Small Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 25.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-38",
+    "sku": "PFY-KIDS-POSTER-MAP",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Map of Imagination Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 25.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-39",
+    "sku": "PFY-KIDS-TEE-OUTSIDE",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Play Outside Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-40",
+    "sku": "PFY-KIDS-POSTER-MOON",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Moonbeam Bedtime Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 21.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-41",
+    "sku": "PFY-KIDS-TEE-HELPER",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Little Helper Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-42",
+    "sku": "PFY-KIDS-POSTER-BIRD",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Bird Song Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 20.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-43",
+    "sku": "PFY-KIDS-TEE-SUNNY",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Sunny Day Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-44",
+    "sku": "PFY-KIDS-POSTER-BUILD2",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Build & Dream Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-45",
+    "sku": "PFY-KIDS-TEE-ADVENTURE",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Adventure Day Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-46",
+    "sku": "PFY-KIDS-POSTER-CLOUD",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Cloud Friends Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 19.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-47",
+    "sku": "PFY-KIDS-TEE-WONDER",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Wonder Club Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 26.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-48",
+    "sku": "PFY-KIDS-POSTER-WAVES",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Ocean Waves Kids Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-49",
+    "sku": "PFY-KIDS-TEE-CABIN",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Cozy Cabin Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "printify-toys-50",
+    "sku": "PFY-KIDS-POSTER-LEARN",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Learn & Laugh Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   }
 ];
-
 const SECTOR_ALIASES: Record<string, string> = {
   "beauty": "beauty",
   "perfume": "beauty",
@@ -407,12 +830,10 @@ const SECTOR_ALIASES: Record<string, string> = {
   "auto": "car accessories",
   "automotive": "car accessories"
 };
-
 function money(value: unknown) {
   const amount = Number(value);
   return Number.isFinite(amount) && amount > 0 ? Math.round(amount * 100) / 100 : 0;
 }
-
 function resolveSector(raw: string) {
   const key = String(raw || "").toLowerCase().trim();
   if (!key) return SELECTED[0]?.sector || "beauty";
@@ -422,7 +843,6 @@ function resolveSector(raw: string) {
   }
   return key;
 }
-
 function curated(sector: string) {
   return SELECTED
     .filter((p) => !p.sector || String(p.sector).toLowerCase() === sector)
@@ -440,21 +860,18 @@ function curated(sector: string) {
       image: String(p.image || ""),
       matchType: String(p.matchType || ""),
       sector: String(p.sector || sector),
+      compliance: String(p.compliance || "EU/Nordic POD merch"),
     }))
     .filter((p) => p.suggestedRetailUsd > 0 && p.name);
 }
-
 function haystack(p: any) {
   return [p.name, p.title, p.category, ...(Array.isArray(p.tags) ? p.tags : []), p.sku].join(" ").toLowerCase();
 }
-
 async function enrichFromLive(token: string, shopId: string, curatedProducts: any[]) {
   try {
     const apiUrl = new URL(BASE + `/shops/${shopId}/products.json`);
     apiUrl.searchParams.set("limit", "50");
-    const response = await fetch(apiUrl, {
-      headers: { Authorization: `Bearer ${token}`, "User-Agent": "NordicStore/1.0" },
-    });
+    const response = await fetch(apiUrl, { headers: { Authorization: `Bearer ${token}`, "User-Agent": "NordicStore/1.0" } });
     if (!response.ok) return curatedProducts;
     const result: any = await response.json();
     const list = Array.isArray(result?.data) ? result.data : Array.isArray(result) ? result : [];
@@ -491,11 +908,8 @@ async function enrichFromLive(token: string, shopId: string, curatedProducts: an
         enriched: true,
       };
     });
-  } catch (_) {
-    return curatedProducts;
-  }
+  } catch (_) { return curatedProducts; }
 }
-
 export default async (req: Request, context: any) => {
   if (req.method !== "GET") return Response.json({ error: "Method not allowed" }, { status: 405 });
   const url = new URL(req.url);
@@ -503,14 +917,12 @@ export default async (req: Request, context: any) => {
   const defaultSector = String(SELECTED[0]?.sector || "beauty");
   const sector = resolveSector(wanted || defaultSector);
   const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
-  let products = curated(sector).slice(0, 30);
+  let products = curated(sector).slice(0, 50);
   const token = (typeof Netlify !== "undefined" && Netlify.env?.get) ? Netlify.env.get("PRINTIFY_API_TOKEN") : context?.env?.PRINTIFY_API_TOKEN;
   const shopId = ((typeof Netlify !== "undefined" && Netlify.env?.get) ? Netlify.env.get("PRINTIFY_SHOP_ID") : context?.env?.PRINTIFY_SHOP_ID) || "28847802";
-  if (token && products.length) {
-    products = await enrichFromLive(String(token), String(shopId), products);
-  }
+  if (token && products.length) products = await enrichFromLive(String(token), String(shopId), products);
   return Response.json(
-    { ok: true, supplier: "printify", sector, query: sector, products, count: products.length, source: "printify-selected-primary", markets: ["NO", "EU", "PE"] },
+    { ok: true, supplier: "printify", sector, query: sector, products, count: products.length, source: "printify-selected-primary", compliance: "EU/Nordic POD merch", markets: ["NO", "EU", "PE"] },
     { status: products.length ? 200 : 503, headers }
   );
 };

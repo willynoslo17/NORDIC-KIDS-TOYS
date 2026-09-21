@@ -12,7 +12,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 21.9,
     "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-2",
@@ -27,7 +28,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 22.9,
     "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-3",
@@ -42,7 +44,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 20.9,
     "image": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-4",
@@ -57,7 +60,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 19.9,
     "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-5",
@@ -72,7 +76,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 24.9,
     "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-6",
@@ -87,7 +92,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 23.9,
     "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad0?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-7",
@@ -102,7 +108,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 22.9,
     "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-8",
@@ -117,7 +124,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 21.9,
     "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-9",
@@ -132,7 +140,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 18.9,
     "image": "https://images.unsplash.com/photo-1587654780291-39c9404d745b?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-10",
@@ -147,7 +156,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 21.5,
     "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-11",
@@ -162,7 +172,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 25.9,
     "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-12",
@@ -177,7 +188,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 19.5,
     "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-13",
@@ -192,7 +204,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 20.5,
     "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-14",
@@ -207,7 +220,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 24.5,
     "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-15",
@@ -222,7 +236,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 19.5,
     "image": "https://images.unsplash.com/photo-1587654780291-39c9404d745b?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-16",
@@ -237,7 +252,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 21.5,
     "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-17",
@@ -252,7 +268,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 23.5,
     "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-18",
@@ -267,7 +284,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 20.5,
     "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-19",
@@ -282,7 +300,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 22.5,
     "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad0?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-20",
@@ -297,7 +316,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 22.9,
     "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-21",
@@ -312,7 +332,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 24.5,
     "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-22",
@@ -327,7 +348,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 19.9,
     "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-23",
@@ -342,7 +364,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 21.9,
     "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-24",
@@ -357,7 +380,8 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 23.9,
     "image": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
   },
   {
     "id": "gelato-toys-25",
@@ -372,7 +396,408 @@ const SELECTED: any[] = [
     "suggestedRetailUsd": 25.5,
     "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
     "matchType": "tee",
-    "sector": "toys"
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch"
+  },
+  {
+    "id": "gelato-toys-26",
+    "sku": "GEL-KIDS-POSTER-FOREST",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Forest Friends Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-27",
+    "sku": "GEL-KIDS-TEE-READER",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Little Reader Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-28",
+    "sku": "GEL-KIDS-POSTER-NUMBERS",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Numbers Trail Educational Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 20.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-29",
+    "sku": "GEL-KIDS-TEE-CUB",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Curious Cub Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-30",
+    "sku": "GEL-KIDS-POSTER-SEASONS",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Nordic Seasons Kids Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 22.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-31",
+    "sku": "GEL-KIDS-TEE-KIND2",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Kind Heart Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 21.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-32",
+    "sku": "GEL-KIDS-POSTER-STARS",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Star Map Kids Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-33",
+    "sku": "GEL-KIDS-TEE-TRAIL",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Trail Buddy Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-34",
+    "sku": "GEL-KIDS-POSTER-COLORS",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Colors of the Fjord Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 19.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-35",
+    "sku": "GEL-KIDS-TEE-STORY2",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Story Hour Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 22.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-36",
+    "sku": "GEL-KIDS-POSTER-ALPHA2",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Animal Alphabet Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 23.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-37",
+    "sku": "GEL-KIDS-TEE-BRAVE",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Brave Small Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 25.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-38",
+    "sku": "GEL-KIDS-POSTER-MAP",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Map of Imagination Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 25.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-39",
+    "sku": "GEL-KIDS-TEE-OUTSIDE",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Play Outside Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-40",
+    "sku": "GEL-KIDS-POSTER-MOON",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Moonbeam Bedtime Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 21.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-41",
+    "sku": "GEL-KIDS-TEE-HELPER",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Little Helper Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-42",
+    "sku": "GEL-KIDS-POSTER-BIRD",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Bird Song Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 20.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-43",
+    "sku": "GEL-KIDS-TEE-SUNNY",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Sunny Day Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-44",
+    "sku": "GEL-KIDS-POSTER-BUILD2",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Build & Dream Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-45",
+    "sku": "GEL-KIDS-TEE-ADVENTURE",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Adventure Day Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-46",
+    "sku": "GEL-KIDS-POSTER-CLOUD",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Cloud Friends Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 19.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-47",
+    "sku": "GEL-KIDS-TEE-WONDER",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Wonder Club Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 26.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-48",
+    "sku": "GEL-KIDS-POSTER-WAVES",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Ocean Waves Kids Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-49",
+    "sku": "GEL-KIDS-TEE-CABIN",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Cozy Cabin Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
+  },
+  {
+    "id": "gelato-toys-50",
+    "sku": "GEL-KIDS-POSTER-LEARN",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Learn & Laugh Wall Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys",
+    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
   }
 ];
 const SECTOR_ALIASES: Record<string, string> = {
@@ -440,7 +865,7 @@ export async function onRequestGet(context: any) {
   const defaultSector = String(SELECTED[0]?.sector || "beauty");
   const sector = resolveSector(wanted || defaultSector);
   const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
-  const products = curated(sector).slice(0, 30);
+  const products = curated(sector).slice(0, 50);
   return Response.json(
     { ok: true, supplier: "gelato", sector, query: sector, products, count: products.length, source: "gelato-selected-primary", markets: ["NO", "EU", "PE"] },
     { status: products.length ? 200 : 503, headers }
