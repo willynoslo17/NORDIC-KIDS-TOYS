@@ -1,875 +1,230 @@
-const SELECTED: any[] = [
-  {
-    "id": "printful-toys-1",
-    "sku": "PFL-KIDS-POSTER-ABC",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "ABC Adventure Poster",
-    "category": "Educational",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 21.9,
-    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-2",
-    "sku": "PFL-KIDS-POSTER-SPACE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Solar System Kids Poster",
-    "category": "Educational",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 22.9,
-    "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-3",
-    "sku": "PFL-KIDS-POSTER-ANIMALS",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Animals Wall Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 20.9,
-    "image": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-4",
-    "sku": "PFL-KIDS-POSTER-COUNT",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Counting Forest Poster",
-    "category": "Educational",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 19.9,
-    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-5",
-    "sku": "PFL-KIDS-TEE-EXPLORE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Little Explorer Kids Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.9,
-    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-6",
-    "sku": "PFL-KIDS-TEE-PLAY",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Play Mode On T-Shirt",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.9,
-    "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad0?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-7",
-    "sku": "PFL-KIDS-TEE-STORY",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Storytime Hero Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.9,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-8",
-    "sku": "PFL-KIDS-TEE-RAINBOW",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Rainbow Crew Kids Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 21.9,
-    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-9",
-    "sku": "PFL-KIDS-POSTER-BUILD",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Build & Learn Poster",
-    "category": "Educational",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 18.9,
-    "image": "https://images.unsplash.com/photo-1587654780291-39c9404d745b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-10",
-    "sku": "PFL-KIDS-POSTER-DINO",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Dinosaurs Dino Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 21.5,
-    "image": "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-11",
-    "sku": "PFL-KIDS-TEE-MAKER",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Future Maker Kids Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 25.9,
-    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-12",
-    "sku": "PFL-KIDS-POSTER-DREAM",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Bedtime Dreams Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 19.5,
-    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-13",
-    "sku": "PFL-KIDS-POSTER-OCEAN",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Ocean Friends Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 20.5,
-    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-14",
-    "sku": "PFL-KIDS-TEE-SCIENCE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Little Scientist Kids Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-15",
-    "sku": "PFL-KIDS-POSTER-SHAPES",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Shapes & Colors Poster",
-    "category": "Educational",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 19.5,
-    "image": "https://images.unsplash.com/photo-1587654780291-39c9404d745b?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-16",
-    "sku": "PFL-KIDS-POSTER-ROCKET",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Rocket Launch Kids Poster",
-    "category": "Educational",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 21.5,
-    "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-17",
-    "sku": "PFL-KIDS-TEE-CHEF",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Little Chef Kids Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-18",
-    "sku": "PFL-KIDS-POSTER-ZOO",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Alphabet Zoo Poster",
-    "category": "Educational",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 20.5,
-    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-19",
-    "sku": "PFL-KIDS-TEE-PLAYGROUND",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Playground Hero Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.5,
-    "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad0?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-20",
-    "sku": "PFL-KIDS-POSTER-FAIRY",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Fairy Tale Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 22.9,
-    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-21",
-    "sku": "PFL-KIDS-TEE-INVENTOR",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Junior Inventor Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-22",
-    "sku": "PFL-KIDS-POSTER-WEATHER",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Weather Watch Kids Poster",
-    "category": "Educational",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 19.9,
-    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-23",
-    "sku": "PFL-KIDS-TEE-KIND",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Super Kind Soft Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 21.9,
-    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-24",
-    "sku": "PFL-KIDS-POSTER-VIKING",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Viking Adventure Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 23.9,
-    "image": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-25",
-    "sku": "PFL-KIDS-TEE-TRAVELER",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Tiny Traveler Kids Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 25.5,
-    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch"
-  },
-  {
-    "id": "printful-toys-26",
-    "sku": "PFL-KIDS-POSTER-FOREST",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Forest Friends Wall Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 21.9,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-27",
-    "sku": "PFL-KIDS-TEE-READER",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Little Reader Soft Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.9,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-28",
-    "sku": "PFL-KIDS-POSTER-NUMBERS",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Numbers Trail Educational Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 20.9,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-29",
-    "sku": "PFL-KIDS-TEE-CUB",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Curious Cub Soft Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-30",
-    "sku": "PFL-KIDS-POSTER-SEASONS",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Nordic Seasons Kids Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 22.5,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-31",
-    "sku": "PFL-KIDS-TEE-KIND2",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Kind Heart Soft Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 21.5,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-32",
-    "sku": "PFL-KIDS-POSTER-STARS",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Star Map Kids Wall Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-33",
-    "sku": "PFL-KIDS-TEE-TRAIL",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Trail Buddy Soft Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.9,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-34",
-    "sku": "PFL-KIDS-POSTER-COLORS",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Colors of the Fjord Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 19.9,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-35",
-    "sku": "PFL-KIDS-TEE-STORY2",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Story Hour Soft Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.5,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-36",
-    "sku": "PFL-KIDS-POSTER-ALPHA2",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Animal Alphabet Wall Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 23.9,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-37",
-    "sku": "PFL-KIDS-TEE-BRAVE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Brave Small Soft Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 25.5,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-38",
-    "sku": "PFL-KIDS-POSTER-MAP",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Map of Imagination Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 25.9,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-39",
-    "sku": "PFL-KIDS-TEE-OUTSIDE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Play Outside Soft Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.9,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-40",
-    "sku": "PFL-KIDS-POSTER-MOON",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Moonbeam Bedtime Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 21.5,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-41",
-    "sku": "PFL-KIDS-TEE-HELPER",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Little Helper Soft Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 21.9,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-42",
-    "sku": "PFL-KIDS-POSTER-BIRD",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Bird Song Wall Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 20.5,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-43",
-    "sku": "PFL-KIDS-TEE-SUNNY",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Sunny Day Soft Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 22.9,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-44",
-    "sku": "PFL-KIDS-POSTER-BUILD2",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Build & Dream Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 22.9,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-45",
-    "sku": "PFL-KIDS-TEE-ADVENTURE",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Adventure Day Soft Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 24.5,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-46",
-    "sku": "PFL-KIDS-POSTER-CLOUD",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Cloud Friends Wall Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 19.5,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-47",
-    "sku": "PFL-KIDS-TEE-WONDER",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Wonder Club Soft Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 26.5,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-48",
-    "sku": "PFL-KIDS-POSTER-WAVES",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Ocean Waves Kids Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-49",
-    "sku": "PFL-KIDS-TEE-CABIN",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Cozy Cabin Soft Tee",
-    "category": "Kids Apparel",
-    "supplierPriceUsd": 8.2,
-    "suggestedRetailUsd": 23.5,
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=800&q=80",
-    "matchType": "tee",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  },
-  {
-    "id": "printful-toys-50",
-    "sku": "PFL-KIDS-POSTER-LEARN",
-    "supplier": "Printful",
-    "provider": "printful",
-    "printifyProductId": "",
-    "printifyVariantId": "",
-    "name": "Learn & Laugh Wall Poster",
-    "category": "Kids Decor",
-    "supplierPriceUsd": 7.5,
-    "suggestedRetailUsd": 21.9,
-    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35a6?auto=format&fit=crop&w=800&q=80",
-    "matchType": "poster",
-    "sector": "toys",
-    "compliance": "EU/Nordic POD merch only \u2014 apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims"
-  }
-];
+const BASE = "https://api.printful.com";
+
 const SECTOR_ALIASES: Record<string, string> = {
-  "beauty": "beauty",
-  "perfume": "beauty",
-  "perfumes": "beauty",
-  "skincare": "beauty",
-  "toys": "toys",
-  "kids": "toys",
-  "kid": "toys",
-  "children": "toys",
-  "electronics": "electronics",
-  "tech": "electronics",
-  "technology": "electronics",
-  "pet supplies": "pet supplies",
-  "pets": "pet supplies",
-  "pet": "pet supplies",
-  "home living": "home living",
-  "home": "home living",
-  "living": "home living",
-  "fitness": "fitness",
-  "outdoor": "fitness",
-  "sports": "fitness",
-  "solar energy": "solar energy",
-  "energy": "solar energy",
-  "solar": "solar energy",
-  "car accessories": "car accessories",
-  "car": "car accessories",
-  "auto": "car accessories",
-  "automotive": "car accessories"
+  beauty: "beauty", perfume: "beauty", perfumes: "beauty", skincare: "beauty",
+  toys: "toys", kids: "toys", kid: "toys", children: "toys",
+  electronics: "electronics", tech: "electronics", technology: "electronics",
+  "pet supplies": "pet supplies", pets: "pet supplies", pet: "pet supplies",
+  "home living": "home living", home: "home living", living: "home living",
+  fitness: "fitness", outdoor: "fitness", sports: "fitness",
+  "solar energy": "solar energy", energy: "solar energy", solar: "solar energy",
+  "car accessories": "car accessories", car: "car accessories", auto: "car accessories", automotive: "car accessories",
 };
+
+/** Printful catalog category IDs chosen per Nordic sector (POD merch only). */
+const SECTOR_CATEGORIES: Record<string, number[]> = {
+  beauty: [48, 195, 29, 2, 258, 202],
+  toys: [3, 228, 55, 105, 202],
+  electronics: [244, 245, 250, 243, 251, 198, 202],
+  "pet supplies": [48, 49, 29, 16, 202],
+  "home living": [55, 56, 195, 258, 252, 230, 198],
+  fitness: [28, 7, 29, 98, 271, 221],
+  "solar energy": [55, 56, 48, 21, 202],
+  "car accessories": [42, 40, 15, 93, 28, 221],
+};
+
+const TYPE_MARKUP: Record<string, number> = {
+  default: 2.35,
+};
+
 function money(value: unknown) {
   const amount = Number(value);
   return Number.isFinite(amount) && amount > 0 ? Math.round(amount * 100) / 100 : 0;
 }
+
 function resolveSector(raw: string) {
   const key = String(raw || "").toLowerCase().trim();
-  if (!key) return SELECTED[0]?.sector || "beauty";
+  if (!key) return "beauty";
   if (SECTOR_ALIASES[key]) return SECTOR_ALIASES[key];
   for (const [alias, sector] of Object.entries(SECTOR_ALIASES)) {
     if (key.includes(alias) || alias.includes(key)) return sector;
   }
-  return key;
+  return SECTOR_ALIASES[key] ? SECTOR_ALIASES[key] : (SECTOR_CATEGORIES[key] ? key : "beauty");
 }
-function curated(sector: string) {
-  return SELECTED
-    .filter((p) => !p.sector || String(p.sector).toLowerCase() === sector)
-    .map((p, i) => ({
-      id: String(p.id || `printful-selected-${i}`),
-      sku: String(p.sku || ""),
-      supplier: "Printful",
-      provider: "printful",
-      name: String(p.name || "Printful product"),
-      category: String(p.category || sector),
-      supplierPriceUsd: money(p.supplierPriceUsd) || money(p.suggestedRetailUsd),
-      suggestedRetailUsd: money(p.suggestedRetailUsd) || money(p.supplierPriceUsd),
-      image: String(p.image || ""),
-      sector: String(p.sector || sector),
-    }))
-    .filter((p) => p.suggestedRetailUsd > 0 && p.name);
+
+function authHeaders(token?: string, storeId?: string) {
+  const headers: Record<string, string> = { "User-Agent": "NordicStore/1.0" };
+  if (token) headers.Authorization = `Bearer ${token}`;
+  if (storeId) headers["X-PF-Store-Id"] = storeId;
+  return headers;
 }
-export default async (req: Request, context: any) => {
-  if (req.method !== "GET") return Response.json({ error: "Method not allowed" }, { status: 405 });
-  const url = new URL(req.url);
-  const wanted = url.searchParams.get("q") || url.searchParams.get("sector") || "";
-  const defaultSector = String(SELECTED[0]?.sector || "beauty");
-  const sector = resolveSector(wanted || defaultSector);
-  const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
-  const products = curated(sector).slice(0, 50);
-  return Response.json(
-    { ok: true, supplier: "printful", sector, query: sector, products, count: products.length, source: "printful-selected-primary", markets: ["NO", "EU", "PE"] },
-    { status: products.length ? 200 : 503, headers }
+
+function normalizeCatalog(row: any, index: number, sector: string, costHint = 0) {
+  const cost = money(costHint);
+  const retail = cost > 0 ? money(cost * (TYPE_MARKUP.default || 2.35)) : 0;
+  return {
+    id: String(row?.id || `printful-catalog-${index}`),
+    sku: `PFL-${row?.id || index}`,
+    supplier: "Printful",
+    provider: "printful",
+    printfulProductId: String(row?.id || ""),
+    name: String(row?.title || row?.name || "Printful product"),
+    category: String(row?.type_name || row?.type || sector),
+    brand: String(row?.brand || "Printful"),
+    supplierPriceUsd: cost || retail,
+    suggestedRetailUsd: retail || cost,
+    image: String(row?.image || ""),
+    sector,
+    compliance: "EU/Nordic POD merch only — apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims",
+  };
+}
+
+function normalizeStore(row: any, index: number, sector: string) {
+  const sync = row?.sync_product || row;
+  const retail = money(sync?.retail_price || row?.retail_price);
+  return {
+    id: String(sync?.id || `printful-store-${index}`),
+    sku: String(sync?.external_id || sync?.id || ""),
+    supplier: "Printful",
+    provider: "printful",
+    printfulProductId: String(sync?.id || ""),
+    name: String(sync?.name || "Printful product"),
+    category: "Printful",
+    brand: "Printful",
+    supplierPriceUsd: retail,
+    suggestedRetailUsd: retail,
+    image: String(sync?.thumbnail_url || sync?.image || ""),
+    sector,
+    compliance: "EU/Nordic POD merch only — apparel/poster/mug/tote/case/cap; no cosmetics liquids, no toy CE claims, no health claims",
+  };
+}
+
+async function loadStoreProducts(headers: Record<string, string>, sector: string) {
+  const url = new URL(BASE + "/store/products");
+  url.searchParams.set("limit", "50");
+  url.searchParams.set("offset", "0");
+  const response = await fetch(url, { headers });
+  if (!response.ok) return [] as any[];
+  const result: any = await response.json().catch(() => ({}));
+  const list = Array.isArray(result?.result) ? result.result : [];
+  const out = [];
+  for (const row of list.slice(0, 50)) {
+    const base = normalizeStore(row, out.length, sector);
+    try {
+      const detailRes = await fetch(`${BASE}/store/products/${base.id}`, { headers });
+      const detail: any = await detailRes.json().catch(() => ({}));
+      if (detailRes.ok) {
+        const variants = Array.isArray(detail?.result?.sync_variants) ? detail.result.sync_variants : [];
+        const priced = variants.find((v: any) => money(v?.retail_price) > 0) || variants[0];
+        const retail = money(priced?.retail_price);
+        if (retail > 0) {
+          base.supplierPriceUsd = retail;
+          base.suggestedRetailUsd = retail;
+        }
+        base.sku = String(priced?.sku || base.sku);
+        const preview = priced?.files?.find?.((f: any) => f?.type === "preview")?.preview_url;
+        if (preview) base.image = String(preview);
+      }
+    } catch (_) {}
+    if (base.name && base.suggestedRetailUsd > 0) out.push(base);
+  }
+  return out;
+}
+
+async function loadCatalogByCategories(headers: Record<string, string>, sector: string) {
+  const cats = SECTOR_CATEGORIES[sector] || SECTOR_CATEGORIES.beauty;
+  const seen = new Set<string>();
+  const collected: any[] = [];
+  const fallbackCats = [229, 4, 5, 6, 1];
+  const allCats = [...cats, ...fallbackCats.filter((c) => !cats.includes(c))];
+  for (const categoryId of allCats) {
+    if (collected.length >= 60) break;
+    const url = new URL(BASE + "/products");
+    url.searchParams.set("category_id", String(categoryId));
+    const response = await fetch(url, { headers });
+    if (!response.ok) continue;
+    const result: any = await response.json().catch(() => ({}));
+    const list = Array.isArray(result?.result) ? result.result : [];
+    for (const row of list) {
+      const id = String(row?.id || "");
+      if (!id || seen.has(id) || row?.is_discontinued) continue;
+      seen.add(id);
+      collected.push(row);
+      if (collected.length >= 60) break;
+    }
+  }
+  // Price a subset in parallel (first 50)
+  const slice = collected.slice(0, 50);
+  const priced = await Promise.all(
+    slice.map(async (row, index) => {
+      let cost = 0;
+      try {
+        const detailRes = await fetch(`${BASE}/products/${row.id}`, { headers });
+        if (detailRes.ok) {
+          const detail: any = await detailRes.json();
+          const variants = Array.isArray(detail?.result?.variants) ? detail.result.variants : [];
+          const inStock = variants.find((v: any) => v?.in_stock && money(v?.price) > 0) || variants.find((v: any) => money(v?.price) > 0);
+          cost = money(inStock?.price);
+          if (inStock?.image) row.image = inStock.image;
+        }
+      } catch (_) {}
+      const item = normalizeCatalog(row, index, sector, cost);
+      if (!item.suggestedRetailUsd) {
+        item.supplierPriceUsd = 12;
+        item.suggestedRetailUsd = 28.9;
+      }
+      return item;
+    })
   );
+  return priced.filter((p) => p.name && p.suggestedRetailUsd > 0).slice(0, 50);
+}
+
+async function onRequestGet(context: any) {
+  const url = new URL(context.request.url);
+  const wanted = url.searchParams.get("q") || url.searchParams.get("sector") || "";
+  const sector = resolveSector(wanted || "beauty");
+  const headersOut = { "access-control-allow-origin": "*", "cache-control": "public, max-age=300" };
+  const token = context.env.PRINTFUL_API_TOKEN ? String(context.env.PRINTFUL_API_TOKEN) : "";
+  const storeId = context.env.PRINTFUL_STORE_ID ? String(context.env.PRINTFUL_STORE_ID) : "";
+  const headers = authHeaders(token || undefined, storeId || undefined);
+
+  try {
+    if (token) {
+      const storeProducts = await loadStoreProducts(headers, sector);
+      if (storeProducts.length >= 8) {
+        return Response.json({
+          ok: true,
+          supplier: "Printful",
+          sector,
+          query: sector,
+          products: storeProducts.slice(0, 50),
+          count: Math.min(storeProducts.length, 50),
+          source: "printful-live-store",
+          markets: ["NO", "EU", "PE"],
+          compliance: "EU/Nordic POD merch",
+        }, { headers: headersOut });
+      }
+    }
+
+    const catalog = await loadCatalogByCategories(headers, sector);
+    return Response.json({
+      ok: true,
+      supplier: "Printful",
+      sector,
+      query: sector,
+      products: catalog,
+      count: catalog.length,
+      source: "printful-live-catalog",
+      markets: ["NO", "EU", "PE"],
+      compliance: "EU/Nordic POD merch",
+    }, { status: catalog.length ? 200 : 503, headers: headersOut });
+  } catch (error) {
+    return Response.json({
+      error: error instanceof Error ? error.message : "Printful request failed",
+      products: [],
+      supplier: "Printful",
+      sector,
+      source: "printful-error",
+    }, { status: 502, headers: headersOut });
+  }
+}
+
+
+export default async (req: Request) => {
+  if (req.method !== "GET") return Response.json({ error: "Method not allowed" }, { status: 405 });
+  return onRequestGet({
+    request: req,
+    env: { PRINTFUL_API_TOKEN: Netlify.env.get("PRINTFUL_API_TOKEN"), PRINTFUL_STORE_ID: Netlify.env.get("PRINTFUL_STORE_ID") },
+  });
 };
 export const config = { path: "/api/printful-products" };
