@@ -1,6 +1,5 @@
 const BASE = "https://api.printify.com/v1";
 
-// Per-store curated catalog — PRIMARY source for storefront (never replace with shared shop dump)
 const SELECTED: any[] = [
   {
     "id": "printify-toys-1",
@@ -226,6 +225,156 @@ const SELECTED: any[] = [
     "image": "https://images.unsplash.com/photo-1587654780291-39c9404d745b?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
     "sector": "toys"
+  },
+  {
+    "id": "printify-toys-16",
+    "sku": "PFY-KIDS-POSTER-ROCKET",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Rocket Launch Kids Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 21.5,
+    "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "printify-toys-17",
+    "sku": "PFY-KIDS-TEE-CHEF",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Little Chef Kids Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "printify-toys-18",
+    "sku": "PFY-KIDS-POSTER-ZOO",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Alphabet Zoo Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 20.5,
+    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "printify-toys-19",
+    "sku": "PFY-KIDS-TEE-PLAYGROUND",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Playground Hero Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 22.5,
+    "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad0?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "printify-toys-20",
+    "sku": "PFY-KIDS-POSTER-FAIRY",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Nordic Fairy Tale Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "printify-toys-21",
+    "sku": "PFY-KIDS-TEE-INVENTOR",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Junior Inventor Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "printify-toys-22",
+    "sku": "PFY-KIDS-POSTER-WEATHER",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Weather Watch Kids Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 19.9,
+    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "printify-toys-23",
+    "sku": "PFY-KIDS-TEE-KIND",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Super Kind Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "printify-toys-24",
+    "sku": "PFY-KIDS-POSTER-VIKING",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Viking Adventure Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 23.9,
+    "image": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "printify-toys-25",
+    "sku": "PFY-KIDS-TEE-TRAVELER",
+    "supplier": "Printify",
+    "provider": "printify",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Tiny Traveler Kids Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 25.5,
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
   }
 ];
 
@@ -310,18 +459,11 @@ async function enrichFromLive(token: string, shopId: string, curatedProducts: an
     const result: any = await response.json();
     const list = Array.isArray(result?.data) ? result.data : Array.isArray(result) ? result : [];
     if (!list.length) return curatedProducts;
-
     const typeWords: Record<string, string[]> = {
-      tote: ["tote", "bag"],
-      tee: ["t-shirt", "tshirt", "tee", "shirt"],
-      mug: ["mug", "cup", "coffee"],
-      crewneck: ["crewneck", "crew neck", "sweatshirt"],
-      hoodie: ["hoodie", "zip"],
-      poster: ["poster", "print"],
-      case: ["case", "phone", "tough"],
-      cap: ["cap", "hat"],
+      tote: ["tote", "bag"], tee: ["t-shirt", "tshirt", "tee", "shirt"], mug: ["mug", "cup", "coffee"],
+      crewneck: ["crewneck", "crew neck", "sweatshirt"], hoodie: ["hoodie", "zip"],
+      poster: ["poster", "print"], case: ["case", "phone", "tough"], cap: ["cap", "hat"],
     };
-
     return curatedProducts.map((item) => {
       const words = typeWords[String(item.matchType || "").toLowerCase()] || [];
       const match = list.find((live: any) => {
@@ -359,30 +501,15 @@ export async function onRequestGet(context: any) {
   const wanted = url.searchParams.get("q") || url.searchParams.get("sector") || "";
   const defaultSector = String(SELECTED[0]?.sector || "beauty");
   const sector = resolveSector(wanted || defaultSector);
-  const headers = {
-    "access-control-allow-origin": "*",
-    "cache-control": "public, max-age=60",
-  };
-
-  // PRIMARY: curated per-store list. Live Printify only enriches — never replaces.
+  const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
   let products = curated(sector).slice(0, 30);
   const token = context.env.PRINTIFY_API_TOKEN;
   const shopId = context.env.PRINTIFY_SHOP_ID || "28847802";
   if (token && products.length) {
     products = await enrichFromLive(String(token), String(shopId), products);
   }
-
   return Response.json(
-    {
-      ok: true,
-      supplier: "printify",
-      sector,
-      query: sector,
-      products,
-      count: products.length,
-      source: "printify-selected-primary",
-      markets: ["NO", "EU", "PE"],
-    },
+    { ok: true, supplier: "printify", sector, query: sector, products, count: products.length, source: "printify-selected-primary", markets: ["NO", "EU", "PE"] },
     { status: products.length ? 200 : 503, headers }
   );
 }

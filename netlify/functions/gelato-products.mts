@@ -223,9 +223,158 @@ const SELECTED: any[] = [
     "image": "https://images.unsplash.com/photo-1587654780291-39c9404d745b?auto=format&fit=crop&w=800&q=80",
     "matchType": "poster",
     "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-16",
+    "sku": "GEL-KIDS-POSTER-ROCKET",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Rocket Launch Kids Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 21.5,
+    "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-17",
+    "sku": "GEL-KIDS-TEE-CHEF",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Little Chef Kids Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 23.5,
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-18",
+    "sku": "GEL-KIDS-POSTER-ZOO",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Alphabet Zoo Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 20.5,
+    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-19",
+    "sku": "GEL-KIDS-TEE-PLAYGROUND",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Playground Hero Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 22.5,
+    "image": "https://images.unsplash.com/photo-1503919545889-aef636e10ad0?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-20",
+    "sku": "GEL-KIDS-POSTER-FAIRY",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Nordic Fairy Tale Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 22.9,
+    "image": "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-21",
+    "sku": "GEL-KIDS-TEE-INVENTOR",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Junior Inventor Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 24.5,
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-22",
+    "sku": "GEL-KIDS-POSTER-WEATHER",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Weather Watch Kids Poster",
+    "category": "Educational",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 19.9,
+    "image": "https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-23",
+    "sku": "GEL-KIDS-TEE-KIND",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Super Kind Soft Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 21.9,
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-24",
+    "sku": "GEL-KIDS-POSTER-VIKING",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Viking Adventure Poster",
+    "category": "Kids Decor",
+    "supplierPriceUsd": 7.5,
+    "suggestedRetailUsd": 23.9,
+    "image": "https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=800&q=80",
+    "matchType": "poster",
+    "sector": "toys"
+  },
+  {
+    "id": "gelato-toys-25",
+    "sku": "GEL-KIDS-TEE-TRAVELER",
+    "supplier": "Gelato",
+    "provider": "gelato",
+    "printifyProductId": "",
+    "printifyVariantId": "",
+    "name": "Tiny Traveler Kids Tee",
+    "category": "Kids Apparel",
+    "supplierPriceUsd": 8.2,
+    "suggestedRetailUsd": 25.5,
+    "image": "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?auto=format&fit=crop&w=800&q=80",
+    "matchType": "tee",
+    "sector": "toys"
   }
 ];
-
 const SECTOR_ALIASES: Record<string, string> = {
   "beauty": "beauty",
   "perfume": "beauty",
@@ -255,12 +404,10 @@ const SECTOR_ALIASES: Record<string, string> = {
   "auto": "car accessories",
   "automotive": "car accessories"
 };
-
 function money(value: unknown) {
   const amount = Number(value);
   return Number.isFinite(amount) && amount > 0 ? Math.round(amount * 100) / 100 : 0;
 }
-
 function resolveSector(raw: string) {
   const key = String(raw || "").toLowerCase().trim();
   if (!key) return SELECTED[0]?.sector || "beauty";
@@ -270,7 +417,6 @@ function resolveSector(raw: string) {
   }
   return key;
 }
-
 function curated(sector: string) {
   return SELECTED
     .filter((p) => !p.sector || String(p.sector).toLowerCase() === sector)
@@ -288,7 +434,6 @@ function curated(sector: string) {
     }))
     .filter((p) => p.suggestedRetailUsd > 0 && p.name);
 }
-
 export default async (req: Request, context: any) => {
   if (req.method !== "GET") return Response.json({ error: "Method not allowed" }, { status: 405 });
   const url = new URL(req.url);
@@ -298,16 +443,7 @@ export default async (req: Request, context: any) => {
   const headers = { "access-control-allow-origin": "*", "cache-control": "public, max-age=60" };
   const products = curated(sector).slice(0, 30);
   return Response.json(
-    {
-      ok: true,
-      supplier: "gelato",
-      sector,
-      query: sector,
-      products,
-      count: products.length,
-      source: "gelato-selected-primary",
-      markets: ["NO", "EU", "PE"],
-    },
+    { ok: true, supplier: "gelato", sector, query: sector, products, count: products.length, source: "gelato-selected-primary", markets: ["NO", "EU", "PE"] },
     { status: products.length ? 200 : 503, headers }
   );
 };
