@@ -2,7 +2,18 @@
 <html lang="es">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Nordic Kids & Toys</title>
+<title>Ludispel · Kids &amp; Toys</title>
+<meta name="description" content="Ludispel: juguetes educativos, creativos, STEM, outdoor, bebés y productos familiares para Noruega, Europa y Perú.">
+<link rel="canonical" href="https://ludispel.no/">
+<meta name="application-name" content="Ludispel">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ludispel">
+<meta property="og:title" content="Ludispel · Kids &amp; Toys">
+<meta property="og:description" content="Ludispel: juguetes educativos, creativos, STEM, outdoor, bebés y productos familiares para Noruega, Europa y Perú.">
+<meta property="og:url" content="https://ludispel.no/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ludispel · Kids &amp; Toys">
+<meta name="twitter:description" content="Ludispel: juguetes educativos, creativos, STEM, outdoor, bebés y productos familiares para Noruega, Europa y Perú.">
 <style>
 :root{--bg:#f7f7f3;--ink:#111827;--muted:#6b7280;--line:#dde1e7;--card:#fff;--accent:#0f172a}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink)}
@@ -18,15 +29,17 @@ nav{position:sticky;top:0;z-index:10;background:rgba(247,247,243,.94);backdrop-f
 .body{padding:15px;display:flex;flex-direction:column;gap:8px;flex:1}.tag{font-size:11px;letter-spacing:1px;color:#64748b;text-transform:uppercase}.price{font-size:19px;font-weight:800}.add{margin-top:auto;background:#111827;color:#fff;border:0;padding:12px;cursor:pointer;font-weight:800}
 .market{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.m{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}.muted{color:var(--muted)}
 .drawer{position:fixed;right:0;top:0;height:100%;width:min(420px,100%);background:#fff;z-index:30;border-left:1px solid var(--line);transform:translateX(100%);transition:.25s;display:flex;flex-direction:column}.drawer.open{transform:none}.head,.foot{padding:18px;border-bottom:1px solid var(--line)}.bodycart{padding:18px;overflow:auto;flex:1}.item{padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}.checkout{width:100%;padding:13px;border:0;background:#111827;color:#fff;font-weight:800}
+footer{padding:35px 5%;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
 @media(max-width:1000px){.products{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:720px){.hero{grid-template-columns:1fr}.hero h1{font-size:48px}.products,.market{grid-template-columns:1fr}}
 </style></head>
 <body>
-<nav><div class="brand">NORDIC KIDS & TOYS</div><div class="controls"><select id="market" class="ctrl"><option value="NO">🇳🇴 Norway</option><option value="EU">🇪🇺 Europe</option><option value="PE">🇵🇪 Perú</option></select><button id="cartBtn" class="ctrl">Cart (<span id="count">0</span>)</button></div></nav>
+<nav><div class="brand">Ludispel</div><div class="controls"><select id="market" class="ctrl"><option value="NO">🇳🇴 Norway</option><option value="EU">🇪🇺 Europe</option><option value="PE">🇵🇪 Perú</option></select><button id="cartBtn" class="ctrl">Cart (<span id="count">0</span>)</button></div></nav>
 <section class="hero"><div><div class="tag">SMART PLAY · LEARNING · FAMILY</div><h1>Play smarter. Grow happier.</h1><p>Juguetes educativos, creativos, STEM, outdoor, bebés, coleccionables y productos familiares adaptados a Noruega, Europa y Perú.</p><a href="#shop"><button class="ctrl" style="background:#111827;color:white;border-color:#111827">EXPLORE TOYS</button></a></div><div class="heroart">PLAY · LEARN · CREATE</div></section>
 <section class="section"><h2>Categorías</h2><div class="filters" id="filters"></div></section>
 <section class="section" id="shop"><h2>Productos destacados</h2><div class="products" id="products"></div></section>
 <section class="section"><h2>Una tienda, tres mercados</h2><div class="market"><div class="m"><b>🇳🇴 Norway</b><p class="muted">NOK · stock europeo prioritario · entrega estándar/express.</p></div><div class="m"><b>🇪🇺 Europe</b><p class="muted">EUR · almacenes europeos · entregas regionales.</p></div><div class="m"><b>🇵🇪 Perú</b><p class="muted">PEN · stock local cuando exista · rápida/COD si el proveedor lo permite.</p></div></div></section>
+<footer class="footer">© 2026 Ludispel es una marca de ML Internasjonal · Operado desde Noruega · Tienda internacional.</footer>
 <aside id="drawer" class="drawer"><div class="head"><b>Tu carrito</b><button class="ctrl" onclick="drawer.classList.remove('open')">Cerrar</button></div><div class="bodycart" id="cart"></div><div class="foot"><div style="display:flex;justify-content:space-between;font-size:20px;font-weight:800;margin-bottom:12px"><span>Total</span><span id="total">0</span></div><button class="checkout">CHECKOUT</button></div></aside>
 <script>
 let data=

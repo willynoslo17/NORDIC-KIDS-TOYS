@@ -1,4 +1,6 @@
-# Nordic Kids & Toys
+# Ludispel — Kids & Toys
+
+Storefront brand: **Ludispel** · https://ludispel.no/ · Ludispel er et varemerke fra ML Internasjonal. (Repo / Pages project: `NORDIC-KIDS-TOYS`, formerly "Nordic Kids & Toys".)
 
 Static storefront for Norway, Europe and Peru.
 
