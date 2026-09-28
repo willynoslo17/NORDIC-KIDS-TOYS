@@ -8,10 +8,10 @@
   const CART_KEY = "nordic-cart:" + STORE;
   const ORDER_KEY = "nordic-orders:" + STORE;
   const CONTACT_EMAILS = {
-    info: "info@mlinternasjonal.no",
-    support: "support@mlinternasjonal.no",
-    orders: "orders@mlinternasjonal.no",
-    marketing: "marketing@mlinternasjonal.no"
+    info: "kontakt@ludispel.no",
+    support: "support@ludispel.no",
+    orders: "orders@ludispel.no",
+    marketing: "kontakt@ludispel.no"
   };
   let started = false;
 
