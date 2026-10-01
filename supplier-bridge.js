@@ -307,13 +307,18 @@
     const category = cfg.category || "General";
     const query = cfg.query || "";
     const [cj, printify, gelato, printful] = await Promise.all([
-      loadCjSelected(cfg),
+      cfg.cj === false ? Promise.resolve([]) : loadCjSelected(cfg), // store opted out of CJ: no request
       loadPodCatalog("printify", category, query),
       loadPodCatalog("gelato", category, query),
       loadPodCatalog("printful", category, query)
     ]);
     window.nordicCatalogs = { cj, printify, gelato, printful };
     mountSwitcher();
+    /* Hide supplier tabs that have no products (e.g. an empty Gelato catalog). */
+    document.querySelectorAll("[data-supplier-switch]").forEach(btn => {
+      const k = btn.getAttribute("data-supplier-switch");
+      btn.hidden = !(window.nordicCatalogs[k] || []).length;
+    });
     const first = ["cj", "printify", "gelato", "printful"].find(k => window.nordicCatalogs[k].length) || "cj";
     const active = applyActiveCatalog(first);
     if (!cj.length && !printify.length && !gelato.length && !printful.length) {
