@@ -30,7 +30,9 @@ export async function onRequestGet(context: any) {
   }));
   const variants = await Promise.all(list.variants.map(async (v) => {
     const values = options.map((_, i) => optionValueNb(v.values[i] || ""));
-    const label = values.filter(Boolean).join(" / ");
+    // Label from the options the customer actually chooses between (single-value options, e.g. "Som bildet", omitted).
+    const chosen = values.filter((val, i) => val && options[i].values.length > 1);
+    const label = (chosen.length ? chosen : values.filter(Boolean)).join(" / ");
     const name = `${baseName} – ${label}`.slice(0, 200);
     const signed = await signQuote(context.env, { provider: "cj", ref: pid, sku: v.sku, name, cost: v.costUsd, ids: { cj_pid: pid, cj_vid: v.vid } });
     return { vid: v.vid, label, values, image: v.image, priceNok: retailNokFromCost(v.costUsd), quote: signed };

@@ -114,6 +114,10 @@ const OPTION_NB: Record<string, string> = {
   plug: "Støpsel", "plug type": "Støpsel", width: "Bredde", height: "Høyde", weight: "Vekt", volume: "Volum",
   number: "Antall", package: "Pakke", "package size": "Pakke", age: "Alder", gender: "Kjønn", flavor: "Smak",
   scent: "Duft", fragrance: "Duft", voltage: "Spenning", wattage: "Effekt", diameter: "Diameter", thickness: "Tykkelse",
+  "suitable height": "Størrelse", "suitable for height": "Størrelse", "child size": "Størrelse", "children size": "Størrelse",
+  "kids size": "Størrelse", "shoe size": "Skostørrelse", "clothing size": "Størrelse", sizes: "Størrelse", colors: "Farge",
+  colours: "Farge", "suitable age": "Alder", "applicable age": "Alder", "age range": "Alder", "suitable for age": "Alder",
+  "applicable people": "For", "applicable crowd": "For", "suitable crowd": "For", "number of pieces": "Antall", set: "Sett",
 };
 
 const PHRASES: Array<[RegExp, string]> = [
@@ -126,7 +130,9 @@ const PHRASES: Array<[RegExp, string]> = [
   [/\bwine\s*red\b/gi, "Vinrød"], [/\brose\s*red\b/gi, "Rosenrød"], [/\bdark\s*red\b/gi, "Mørkerød"],
   [/\brose\s*gold\b/gi, "Roségull"], [/\blight\s*pink\b/gi, "Lyserosa"], [/\bdark\s*pink\b/gi, "Mørkerosa"],
   [/\blight\s*purple\b/gi, "Lyselilla"], [/\bdark\s*purple\b/gi, "Mørkelilla"], [/\bdark\s*brown\b/gi, "Mørkebrun"],
-  [/\blight\s*brown\b/gi, "Lysebrun"], [/\boff\s*-?white\b/gi, "Offwhite"],
+  [/\blight\s*brown\b/gi, "Lysebrun"], [/\boff\s*-?white\b/gi, "Offwhite"], [/\brice\s*white\b/gi, "Offwhite"],
+  [/(\d+)\s*to\s*(\d+)/gi, "$1–$2"], [/(\d+)\s*-?\s*(years?\s*old|years?|yrs?|y)\b/gi, "$1 år"],
+  [/(\d+)\s*-?\s*(months?\s*old|months?)\b/gi, "$1 mnd"],
 ];
 const WORDS: Record<string, string> = {
   black: "Svart", white: "Hvit", red: "Rød", blue: "Blå", green: "Grønn", yellow: "Gul", pink: "Rosa", purple: "Lilla",
@@ -136,7 +142,10 @@ const WORDS: Record<string, string> = {
   cyan: "Cyan", rose: "Rose", champagne: "Champagne", colour: "farge", color: "farge", colors: "farger", colours: "farger",
   dad: "Pappa", father: "Pappa", mom: "Mamma", mother: "Mamma", kid: "Barn", kids: "Barn", child: "Barn",
   children: "Barn", women: "Dame", woman: "Dame", men: "Herre", man: "Herre", boy: "Gutt", boys: "Gutt",
-  girl: "Jente", girls: "Jente", adult: "Voksen", style: "Stil", set: "Sett", piece: "stk", pieces: "stk",
+  girl: "Jente", girls: "Jente", adult: "Voksen", style: "Stil", piece: "stk", pieces: "stk", random: "Tilfeldig",
+  jacket: "Jakke", pants: "Bukse", trousers: "Bukse", top: "Topp", dress: "Kjole", skirt: "Skjørt", shorts: "Shorts",
+  hat: "Lue", coat: "Kåpe", vest: "Vest", shirt: "Skjorte", suit: "Sett", old: "", year: "år", years: "år",
+  month: "mnd", months: "mnd", to: "til", baby: "Baby", toddler: "Småbarn", unisex: "Unisex", left: "Venstre", right: "Høyre",
   pcs: "stk", pc: "stk", pair: "par", pairs: "par", large: "Stor", small: "Liten", medium: "Medium",
 };
 
