@@ -51,7 +51,7 @@ let data=
 [
 {id:1,n:'T-skjorte til barn',c:'Kids',p:22},{id:2,n:'Hettegenser til barn',c:'Kids',p:39},{id:3,n:'Babybody',c:'Baby',p:24},{id:4,n:'Smekke',c:'Baby',p:14},{id:5,n:'Kopp',c:'Family',p:15},{id:6,n:'Handlenett',c:'Accessories',p:19},{id:7,n:'Plakat A3',c:'Family',p:18},{id:8,n:'Caps til barn',c:'Accessories',p:17}
 ];
-const cats=['All','Kids','Baby','Family','Accessories'];const catNb={All:'Alle',Kids:'Barn',Family:'Familie',Accessories:'Tilbehør'};
+const cats=['All','Kids','Baby','Family','Toys','Accessories'];const catNb={All:'Alle',Kids:'Barn',Family:'Familie',Toys:'Leker',Accessories:'Tilbehør'};
 const m={NO:{r:11.7,c:'NOK',l:'nb-NO',s:79,d:'5–20'},EU:{r:1,c:'EUR',l:'en-IE',s:7.9,d:'5–20'},PE:{r:4.05,c:'PEN',l:'es-PE',s:14,d:'10–25'}};
 let marketCode='NO',f='All',cartState={};
 const $=s=>document.querySelector(s), money=x=>new Intl.NumberFormat(m[marketCode].l,{style:'currency',currency:m[marketCode].c,maximumFractionDigits:0}).format(x*m[marketCode].r);
@@ -62,7 +62,7 @@ function rc(){let t=0,n=0;document.getElementById('cart').innerHTML=Object.entri
 document.getElementById('market').onchange=e=>{marketCode=e.target.value;rp();rc()};cartBtn.onclick=()=>drawer.classList.add('open');rf();rp();rc();
 </script>
 
-<script src="supplier-bridge.js"></script><script>loadNordicCatalog({query:"kids clothing",category:"Barn og familie",cjLocalFallback:false,cjExclude:"\\b(toys?|montessori|puzzles?|building blocks?|plush|dolls?|rattles?|teethers?|games?)\\b",catMap:{"kids apparel":"Kids","baby apparel":"Baby","apparel":"Family","bags":"Accessories","baby":"Baby","barn":"Kids","familie":"Family"}});</script>
+<script src="supplier-bridge.js"></script><script>loadNordicCatalog({query:"kids clothing",category:"Barn og familie",cjLocalFallback:false,cjExclude:"\\b(toys?|montessori|puzzles?|building blocks?|plush|dolls?|rattles?|teethers?|games?)\\b",catMap:{"kids apparel":"Kids","baby apparel":"Baby","apparel":"Family","bags":"Accessories","baby":"Baby","barn":"Kids","familie":"Family","leker":"Toys"}});</script>
 <script src="commerce-runtime.js"></script>
 <script src="newsletter.js" defer></script>
 </body></html>
