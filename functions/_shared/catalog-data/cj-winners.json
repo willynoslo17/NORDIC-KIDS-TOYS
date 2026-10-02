@@ -222,7 +222,13 @@
     "1769195697422741504",
     "4C2DE87C-7C98-4478-9E62-CC3FDFE4C9CA",
     "DE4280FA-DE72-4530-AC67-D51D1C2C8368",
-    "1777209536554733568"
+    "1777209536554733568",
+    "D389A46A-9707-4840-9429-5823EEBF4090",
+    "1579322935687524352",
+    "1500702502273167360",
+    "1489408145003515904",
+    "1379993362186244096",
+    "1405694161558048768"
   ],
   "minUsd": 3.5,
   "maxUsd": 33.3,
@@ -1383,7 +1389,7 @@
     {
       "id": "1372052900494315520",
       "sku": "CJYZ1045057",
-      "name": "Montessori-tallstaver i tre",
+      "name": "Pedagogiske tallstaver i tre",
       "nameEn": "Preschool Toys",
       "category": "Leker",
       "image": "https://cf.cjdropshipping.com/1615957438450.jpg",
@@ -1579,6 +1585,66 @@
       "image": "https://oss-cf.cjdropshipping.com/product/2024/04/08/05/4ce69848-92cb-424a-a632-59d92822d991_trans.jpeg",
       "supplierPriceMaxUsd": 3.01,
       "keyword": "cj-selected (eksisterende utvalg)"
+    },
+    {
+      "id": "D389A46A-9707-4840-9429-5823EEBF4090",
+      "sku": "CJWJWJMR02035",
+      "name": "Kosedyr – tapir",
+      "nameEn": "Tapir stuffed animal",
+      "category": "Leker",
+      "image": "https://cf.cjdropshipping.com/20200929/1761395396195.jpg",
+      "supplierPriceMaxUsd": 7.3704,
+      "keyword": "stuffed animal"
+    },
+    {
+      "id": "1579322935687524352",
+      "sku": "CJMR1583501",
+      "name": "Kosedyr – skilpadde med kirsebær",
+      "nameEn": "Cute Cherry Turtle Stuffed Animal",
+      "category": "Leker",
+      "image": "https://cf.cjdropshipping.com/49009e04-5cf4-4075-827d-53604ee456ac.jpg",
+      "supplierPriceMaxUsd": 10.3334,
+      "keyword": "stuffed animal"
+    },
+    {
+      "id": "1500702502273167360",
+      "sku": "CJMR1432096",
+      "name": "Kosepute formet som dinosaur",
+      "nameEn": "Cuddly Dinosaur Pillow Stuffed Animal",
+      "category": "Leker",
+      "image": "https://cf.cjdropshipping.com/6dbdc3c5-a52d-46ea-ac4e-249ec4cdecac.jpg",
+      "supplierPriceMaxUsd": 11.8149,
+      "keyword": "stuffed animal"
+    },
+    {
+      "id": "1489408145003515904",
+      "sku": "CJMR1407832",
+      "name": "Kosedyr – pingvinunge med store øyne",
+      "nameEn": "Big Eyes Baby Penguin Simulation Stuffed Animal",
+      "category": "Leker",
+      "image": "https://cf.cjdropshipping.com/2dd40e87-fa9c-4d87-bbe1-3726100da7e9.jpg",
+      "supplierPriceMaxUsd": 4.4075,
+      "keyword": "stuffed animal"
+    },
+    {
+      "id": "1379993362186244096",
+      "sku": "CJJT1070226",
+      "name": "Sekskantet slottstelt for inne og ute",
+      "nameEn": "Children's Tent Indoor And Outdoor Hexagonal Princess Castle Tent Play House",
+      "category": "Leker",
+      "image": "https://cf.cjdropshipping.com/1617850821929.jpg",
+      "supplierPriceMaxUsd": 25.5186,
+      "keyword": "kids play tent"
+    },
+    {
+      "id": "1405694161558048768",
+      "sku": "CJJT1179334",
+      "name": "Sengehimmel i blonder",
+      "nameEn": "Chiffonx Lace Princess Bed Canopy Mosquito Net Hanging Curtain Baby Indoor Outdoor Play Reading Tent Kids Bedroom Decoration",
+      "category": "Barn",
+      "image": "https://cf.cjdropshipping.com/1624070972418.jpg",
+      "supplierPriceMaxUsd": 18.1112,
+      "keyword": "kids play tent"
     }
   ]
 }
