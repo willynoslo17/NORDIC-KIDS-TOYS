@@ -175,7 +175,8 @@ export async function onRequestGet(context: { request: Request; env: Env }) {
   const url = new URL(context.request.url);
   if (!enabled || url.searchParams.get("setup") !== "1") return reply({ enabled, store: STORE.slug, provider: "brevo" });
   try {
-    const setup = await getSetup(context.env, url.origin);
+    // Explicit setup requests are also the maintenance path: re-check and refresh the named DOI template.
+    const setup = await getSetup(context.env, url.origin, true);
     return reply({ enabled, store: STORE.slug, provider: "brevo", list: LIST_NAME, listReady: setup.listId > 0, template: TEMPLATE_NAME, templateReady: setup.templateId > 0, sender: SENDER.email, redirectionUrl: REDIRECT_URL });
   } catch (error) {
     const e = error as BrevoError;
