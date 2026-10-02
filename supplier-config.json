@@ -2,7 +2,7 @@
   "store": "kids",
   "cjDropshipping": {
     "enabled": true,
-    "query": "educational toys",
+    "query": "kids clothing",
     "catalogMode": "live-curated-winners",
     "storefrontCap": 150,
     "note": "Live CJ API curated to top ~120–150 winners (listedNum/sales/price/EU cues). totalRecords may stay high in meta; products[] is capped for boutique storefront."
@@ -22,7 +22,7 @@
     "catalogMode": "live-sector-with-selected",
     "catalogFile": "catalog/printify-selected.json",
     "note": "Sector-filtered Printify catalog mirrors CJ q=; printify-selected.json is the per-store curated set (~12 items). Printify left as-is this ship. Printify left as-is this ship. Printify left as-is this ship. Printify left as-is this ship.",
-    "sectorQuery": "toys",
+    "sectorQuery": "kids clothing",
     "matchTypes": [
       "poster",
       "tee"
@@ -33,13 +33,13 @@
     "catalogMode": "live-api-primary",
     "catalogFile": "catalog/gelato-products.json",
     "note": "Live Gelato API via GELATO_API_KEY (store first, then public catalog). Local JSON is empty fallback only — never selected clones.",
-    "sectorQuery": "toys"
+    "sectorQuery": "kids clothing"
   },
   "printful": {
     "enabled": true,
     "catalogMode": "live-api-primary",
     "catalogFile": "catalog/printful-products.json",
     "note": "Live Printful API via PRINTFUL_API_TOKEN (store first, then public catalog). Local JSON is empty fallback only — never selected clones.",
-    "sectorQuery": "toys"
+    "sectorQuery": "kids clothing"
   }
 }
