@@ -49,7 +49,7 @@ footer{padding:35px 5%;border-top:1px solid var(--line);color:var(--muted);font-
 <script>
 let data=[];
 const cats=['All','Kids','Baby','Family','Accessories'];const catNb={All:'Alle',Kids:'Barn',Family:'Familie',Accessories:'Tilbehør'};
-const m={NO:{r:11.3,c:'NOK',l:'nb-NO',s:79,d:'5–20'},EU:{r:1,c:'EUR',l:'en-IE',s:7.9,d:'5–20'},PE:{r:4.05,c:'PEN',l:'es-PE',s:14,d:'10–25'}};
+const m={NO:{r:11.7,c:'NOK',l:'nb-NO',s:79,d:'5–20'},EU:{r:1,c:'EUR',l:'en-IE',s:7.9,d:'5–20'},PE:{r:4.05,c:'PEN',l:'es-PE',s:14,d:'10–25'}};
 let marketCode='NO',f='All',cartState={};
 const $=s=>document.querySelector(s), money=x=>new Intl.NumberFormat(m[marketCode].l,{style:'currency',currency:m[marketCode].c,maximumFractionDigits:0}).format(x*m[marketCode].r);
 function rf(){filters.innerHTML=cats.map(x=>`<button class="chip ${f===x?'active':''}" onclick="f='${x}';rf();rp()">${catNb[x]||x}</button>`).join('')}
