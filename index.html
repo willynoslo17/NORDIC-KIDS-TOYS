@@ -62,7 +62,7 @@ function rc(){let t=0,n=0;document.getElementById('cart').innerHTML=Object.entri
 document.getElementById('market').onchange=e=>{marketCode=e.target.value;rp();rc()};cartBtn.onclick=()=>drawer.classList.add('open');rf();rp();rc();
 </script>
 
-<script src="supplier-bridge.js"></script><script>loadNordicCatalog({query:"kids clothing",category:"Barn og familie",cj:false,cjExclude:"\\b(toys?|montessori|puzzles?|building blocks?|plush|dolls?|rattles?|teethers?|games?)\\b",catMap:{"kids apparel":"Kids","baby apparel":"Baby","apparel":"Family","bags":"Accessories"}});</script>
+<script src="supplier-bridge.js"></script><script>loadNordicCatalog({query:"kids clothing",category:"Barn og familie",cjLocalFallback:false,cjExclude:"\\b(toys?|montessori|puzzles?|building blocks?|plush|dolls?|rattles?|teethers?|games?)\\b",catMap:{"kids apparel":"Kids","baby apparel":"Baby","apparel":"Family","bags":"Accessories"}});</script>
 <script src="commerce-runtime.js"></script>
 <script src="newsletter.js" defer></script>
 </body></html>
