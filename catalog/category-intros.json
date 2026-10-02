@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "no": "Barneklær",
+      "es": "Ropa infantil",
+      "intro_no": "Når du velger barneklær, bør du først kontrollere størrelsesinformasjon og målene til den som skal bruke plagget. Sammenlign oppgitte mål, størrelse og tekstilsammensetning med behovene dine, og vurder om passform og materiale passer til bruken du har i tankene. Se etter opplysninger om vaskeanvisning og eventuell informasjon om alder eller bruk og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
+      "intro_es": "Al elegir ropa infantil, revisa la guía de tallas y las medidas de quien usará la prenda. Compara las medidas, la talla y la composición textil indicadas con lo que necesitas y considera si el ajuste y el material corresponden al uso previsto. Comprueba las instrucciones de lavado y cualquier indicación de edad o uso. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
+    },
+    {
+      "no": "Klær for voksne",
+      "es": "Ropa para adultos",
+      "intro_no": "Når du velger klær for voksne, bør du først kontrollere størrelsestabell og passformen du foretrekker. Sammenlign mål, størrelse og materialbeskrivelse med behovene dine, og vurder om plaggets snitt og stoff passer til ønsket bruk. Se etter opplysninger om vaskeanvisning og informasjon om tekstilsammensetning og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
+      "intro_es": "Al elegir ropa para adultos, revisa la tabla de tallas y el ajuste que prefieres. Compara las medidas, la talla y la descripción del material con lo que necesitas y considera si el corte y el tejido se adaptan al uso que buscas. Comprueba las instrucciones de lavado y la composición textil. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
+    },
+    {
+      "no": "Nattøy og basisplagg",
+      "es": "Ropa de dormir y prendas básicas",
+      "intro_no": "Når du velger nattøy og basisplagg, bør du først kontrollere størrelse, passform og hvordan plagget skal brukes. Sammenlign mål og tekstilmateriale som står i produktbeskrivelsen med behovene dine, og vurder om stoff og fasong passer til komforten du ønsker. Se etter opplysninger om vaskeanvisning, materialer og tilgjengelige størrelsesvalg og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
+      "intro_es": "Al elegir ropa de dormir y prendas básicas, revisa la talla, el ajuste y el uso previsto de la prenda. Compara las medidas y el material textil indicados en la ficha con lo que necesitas y considera si el tejido y la forma corresponden a la comodidad que buscas. Comprueba las instrucciones de lavado, materiales y tallas disponibles. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
+    },
+    {
+      "no": "Sengetøy og soveromstekstiler",
+      "es": "Ropa de cama y textiles de dormitorio",
+      "intro_no": "Når du velger sengetøy og soveromstekstiler, bør du først kontrollere målene på seng, dyne eller pute som tekstilet skal passe til. Sammenlign oppgitte dimensjoner, materialer og lukkemåte med behovene dine, og vurder om størrelsen passer til sengetøyet du allerede bruker. Se etter opplysninger om materialbeskrivelse og vaskeanvisning og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
+      "intro_es": "Al elegir ropa de cama y textiles de dormitorio, revisa las medidas de la cama, el edredón o la almohada. Compara las dimensiones, los materiales y el tipo de cierre indicados con lo que necesitas y considera si el tamaño coincide con la ropa de cama que ya utilizas. Comprueba la descripción del material y las instrucciones de lavado. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
+    },
+    {
+      "no": "Håndklær og badetekstiler",
+      "es": "Toallas y textiles de baño",
+      "intro_no": "Når du velger håndklær og badetekstiler, bør du først kontrollere ønsket størrelse og hvor tekstilet skal brukes. Sammenlign mål, materialer og oppgitte pleieråd med behovene dine, og vurder om format og vedlikehold passer til husholdningen din. Se etter opplysninger om vaskeanvisning og informasjon om tekstilsammensetning og bruksinstruksjoner på produktsiden. Tenk gjennom hvor og hvordan produktet skal brukes; mål, materialer og kompatibilitet kan påvirke valget. Hvis en viktig opplysning mangler, kontakt butikken før du bestiller.",
+      "intro_es": "Al elegir toallas y textiles de baño, revisa el tamaño que buscas y dónde usarás el textil. Compara las medidas, los materiales y los cuidados indicados con lo que necesitas y considera si el formato y mantenimiento encajan con tu hogar. Comprueba las instrucciones de lavado y la composición textil. Las medidas, los materiales y la compatibilidad influyen en la elección. Si falta un dato importante, contacta con la tienda antes de comprar."
+    }
+  ]
+}
