@@ -2,68 +2,342 @@
 <html lang="nb">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Ludispel | Leker, klær og tekstiler for barn og familie</title>
-<meta name="description" content="Se leker, klær og tekstiler for barn og familie. Les om sikkerhet, størrelser, materialer og stell.">
+<title>Ludispel | Leker og barneklær – lek, lær og voks</title>
+<meta name="description" content="Ludispel er nettbutikken for leker og barneklær i Norge. Lek, lær og voks – frakt 79 kr, 14 dagers angrerett, trygg med kort via Stripe.">
 <link rel="canonical" href="https://ludispel.no/">
 <meta name="application-name" content="Ludispel">
+<meta name="theme-color" content="#FFE29A">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Ludispel">
-<meta property="og:title" content="Ludispel | Leker, klær og tekstiler for barn og familie">
-<meta property="og:description" content="Se leker, klær og tekstiler for barn og familie. Les om sikkerhet, størrelser, materialer og stell.">
+<meta property="og:title" content="Ludispel | Leker og barneklær – lek, lær og voks">
+<meta property="og:description" content="Ludispel er nettbutikken for leker og barneklær i Norge. Lek, lær og voks – frakt 79 kr, 14 dagers angrerett, betal med kort via Stripe.">
 <meta property="og:url" content="https://ludispel.no/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ludispel | Leker, klær og tekstiler for barn og familie">
-<meta name="twitter:description" content="Se leker, klær og tekstiler for barn og familie. Les om sikkerhet, størrelser, materialer og stell.">
+<meta name="twitter:title" content="Ludispel | Leker og barneklær – lek, lær og voks">
+<meta name="twitter:description" content="Ludispel er nettbutikken for leker og barneklær i Norge. Lek, lær og voks – frakt 79 kr, 14 dagers angrerett, betal med kort via Stripe.">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta property="og:image" content="https://ludispel.no/og-image.png">
 <meta name="twitter:image" content="https://ludispel.no/og-image.png">
-<style>
-:root{--bg:#f7f7f3;--ink:#111827;--muted:#6b7280;--line:#dde1e7;--card:#fff;--accent:#0f172a}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--ink)}
-nav{position:sticky;top:0;z-index:10;background:rgba(247,247,243,.94);backdrop-filter:blur(12px);display:flex;justify-content:space-between;align-items:center;padding:16px 5%;border-bottom:1px solid var(--line)}
-.brand{font-weight:900;letter-spacing:2px}.controls{display:flex;gap:8px}button,select{font:inherit}
-.ctrl,.chip{border:1px solid var(--line);background:white;padding:10px 12px;cursor:pointer}
-.hero{padding:72px 5%;display:grid;grid-template-columns:1.1fr .9fr;gap:35px;align-items:center}
-.hero h1{font-size:64px;line-height:.95;margin:10px 0}.hero p{color:var(--muted);font-size:18px;line-height:1.6}
-.heroart{height:380px;border-radius:30px;background:radial-gradient(circle at 30% 30%,#dbeafe,transparent 35%),radial-gradient(circle at 75% 40%,#fde68a,transparent 30%),radial-gradient(circle at 50% 80%,#dcfce7,transparent 30%),#fff;border:1px solid var(--line);display:grid;place-items:center;font-size:32px;font-weight:900}
-.section{padding:48px 5%}.section h2{font-size:38px;margin:0 0 20px}.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.chip.active{background:#111827;color:#fff}
-.products{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
-.visual{height:180px;display:grid;place-items:center;font-weight:900;font-size:22px;background:linear-gradient(135deg,#eef2ff,#fef3c7)}
-.body{padding:15px;display:flex;flex-direction:column;gap:8px;flex:1}.tag{font-size:11px;letter-spacing:1px;color:#64748b;text-transform:uppercase}.price{font-size:19px;font-weight:800}.add{margin-top:auto;background:#111827;color:#fff;border:0;padding:12px;cursor:pointer;font-weight:800}
-.market{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.m{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px}.muted{color:var(--muted)}
-.drawer{position:fixed;right:0;top:0;height:100%;width:min(420px,100%);background:#fff;z-index:30;border-left:1px solid var(--line);transform:translateX(100%);transition:.25s;display:flex;flex-direction:column}.drawer.open{transform:none}.head,.foot{padding:18px;border-bottom:1px solid var(--line)}.bodycart{padding:18px;overflow:auto;flex:1}.item{padding:10px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}.checkout{width:100%;padding:13px;border:0;background:#111827;color:#fff;font-weight:800}
-footer{padding:35px 5%;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
-@media(max-width:1000px){.products{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:720px){.hero{grid-template-columns:1fr}.hero h1{font-size:48px}.products,.market{grid-template-columns:1fr}}
-/* kategorier */.katgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:16px}.katblock{border:1px solid var(--line);padding:22px;background:#fff;border-radius:16px;scroll-margin-top:90px}.katblock h3{font-size:20px;margin:0 0 10px}.katblock p{margin:0;line-height:1.6}.katES{border-top:1px solid var(--line);margin-top:14px;padding-top:12px}.katES h4{font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:600;margin:0 0 6px;color:var(--muted)}.katES p{color:var(--muted)}.katsub{font-weight:400;color:var(--muted)}.katmore{display:inline-block;margin-top:10px;font-size:13px;color:inherit;text-decoration:underline;text-underline-offset:3px}</style><style id="ml-legal-footer-css">.ml-legal-footer p{margin:6px 0;line-height:1.55}.ml-legal-footer a{color:inherit;text-decoration:underline;text-underline-offset:2px}.ml-legal-links{display:flex;flex-wrap:wrap;gap:6px 16px;margin:12px 0}.ml-legal-en{opacity:.8;font-size:12px}</style></head>
+<link rel="stylesheet" href="/store.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"OnlineStore","name":"Ludispel","url":"https://ludispel.no/","description":"Nettbutikk for leker og barneklær i Norge. Lek, lær og voks.","inLanguage":"nb","areaServed":"NO","currenciesAccepted":"NOK","paymentAccepted":"Credit Card"}
+</script>
+</head>
 <body>
-<nav><div class="brand">Ludispel</div><div class="controls"><select id="market" class="ctrl"><option value="NO">🇳🇴 Norge</option><option value="EU">🇪🇺 Europa</option><option value="PE">🇵🇪 Peru</option></select><button id="cartBtn" class="ctrl">Handlekurv (<span id="count">0</span>)</button></div></nav>
-<section class="hero"><div><div class="tag">BARN · FAMILIE · HVERDAG</div><h1>Fargerike leker, klær og tekstiler for barn og familie.</h1><p>Leker, klær, tekstiler og tilbehør med Ludispel-design for barn og familier. Prisene i NOK er inkl. 25 % MVA. <span lang="es">Juguetes, ropa, textiles y accesorios con diseño Ludispel para niños y familias. Precios en NOK con 25 % de IVA noruego (MVA) incluido.</span></p><a href="#shop"><button class="ctrl" style="background:#111827;color:white;border-color:#111827">SE PRODUKTENE</button></a></div><div class="heroart">LEKER · KLÆR · TEKSTILER</div></section>
-<section class="section"><h2>Kategorier</h2><div class="filters" id="filters"></div></section>
-<section class="section" id="shop"><h2>Utvalgte produkter</h2><div class="products" id="products"></div></section>
-<section class="section"><h2>Én butikk, tre markeder</h2><div class="market"><div class="m"><b>🇳🇴 Norge</b><p class="muted">NOK · standard frakt 79 kr · 5–20 virkedager.</p></div><div class="m"><b>🇪🇺 EU/EØS</b><p class="muted">EUR · standard frakt €7,90 · 5–20 virkedager.</p></div><div class="m"><b>🇵🇪 Peru</b><p class="muted">PEN · standard frakt S/ 14 · 10–25 virkedager.</p></div></div></section>
-<section class="section" id="kategorier" lang="nb" aria-label="Kategorier"><h2>Kategorier <span class="katsub" lang="es">/ Categorías</span></h2><p class="muted" style="margin:-8px 0 20px">Hva du bør se etter i hver kategori før du bestiller. <span lang="es">Qué conviene revisar en cada categoría antes de comprar.</span></p><div class="katgrid"><article class="katblock" id="kat-leker"><h3>Leker</h3><p>Velg leker etter anbefalt alder og les alltid produktets sikkerhetsinformasjon. Kontroller CE-merking der det kreves, følg advarsler og bruksanvisning, og hold små deler og emballasje borte fra små barn når produktet krever det.</p><div class="katES" lang="es"><h4>Juguetes</h4><p>Elige los juguetes según la edad recomendada y lee siempre la información de seguridad del producto. Comprueba el marcado CE cuando corresponda, sigue las advertencias y las instrucciones, y mantén las piezas pequeñas y el embalaje fuera del alcance de los niños pequeños cuando el producto lo requiera.</p></div></article><article class="katblock" id="kat-barneklaer"><h3>Barneklær</h3><p>Barn vokser fort, så sammenlign størrelsestabellen med et plagg som sitter godt i dag, i stedet for å gå etter alder alene. T-skjorter og hettegensere bør tåle mye vask; se oppgitt materialsammensetning og vaskeanvisning. På plagg til de minste er det lurt å sjekke at hetta ikke har lange snorer. Trykk holder seg ofte bedre når plagget vaskes med vrangen ut og ikke tørkes på høy varme.</p><div class="katES" lang="es"><h4>Ropa infantil</h4><p>Los niños crecen rápido, así que compara la tabla de tallas con una prenda que hoy les quede bien, en lugar de guiarte solo por la edad. Las camisetas y sudaderas deben aguantar muchos lavados; revisa la composición del tejido y las instrucciones de lavado. En las prendas para los más pequeños conviene comprobar que la capucha no tenga cordones largos. Los estampados suelen durar más si la prenda se lava del revés y no se seca a alta temperatura.</p></div></article><article class="katblock" id="kat-babyklaer"><h3>Babyklær</h3><p>Babystørrelser oppgis ofte i måneder, men vekt og lengde sier mer enn alder. På en body er trykknapper i skrittet praktisk ved bleieskift, og en omslagshals gjør det lettere å trekke plagget over hodet. Velg myke stoffer uten stive merkelapper mot huden. En smekke bør ha en lukking som er enkel for deg, men ikke for babyen, og den må tåle hyppig vask.</p><div class="katES" lang="es"><h4>Ropa de bebé</h4><p>Las tallas de bebé suelen indicarse en meses, pero el peso y la longitud dicen más que la edad. En un body, los broches en la entrepierna facilitan el cambio de pañal, y un cuello cruzado ayuda a pasar la prenda por la cabeza. Elige tejidos suaves sin etiquetas rígidas en contacto con la piel. Un babero debería tener un cierre fácil para ti, pero no para el bebé, y aguantar lavados frecuentes.</p></div></article><article class="katblock" id="kat-familieklaer"><h3>Familieklær</h3><p>Like plagg til hele familien er morsomt på bilder og turer, men voksne og barn bruker ulike størrelsestabeller. Mål et plagg du allerede har, både brystvidde og lengde, og sammenlign med tabellen for hver størrelse. Unisex-snitt er ofte rettere enn dame- eller herremodeller. Bestiller du flere størrelser, sjekk at fargen finnes i alle, siden noen modeller har ulikt fargeutvalg for voksne og barn.</p><div class="katES" lang="es"><h4>Ropa para la familia</h4><p>Las prendas a juego para toda la familia lucen bien en fotos y salidas, pero adultos y niños usan tablas de tallas distintas. Mide una prenda que ya tengas, tanto el contorno de pecho como el largo, y compárala con la tabla de cada talla. Los cortes unisex suelen ser más rectos que los modelos de mujer u hombre. Si pides varias tallas, verifica que el color esté disponible en todas, porque algunos modelos no ofrecen los mismos colores para adultos y niños.</p></div></article><article class="katblock" id="kat-capser-vesker-og-tilbehor"><h3>Capser, vesker og tilbehør</h3><p>Hvor stor er hodeomkretsen? Det er det første du bør vite før du kjøper caps, og en justerbar reim bak gjør den lettere å dele mellom søsken. På en tøyveske er det verdt å se på mål, lengden på hankene og om den tåler å bære matvarer. Små detaljer som spenner og knapper kan løsne, så tenk på alderen til barnet som skal bruke tilbehøret, og les vaskeanvisningen.</p><div class="katES" lang="es"><h4>Gorras, bolsas y accesorios</h4><p>¿Cuál es el contorno de la cabeza? Es lo primero que conviene saber antes de comprar una gorra, y una tira ajustable en la parte trasera facilita compartirla entre hermanos. En una bolsa de tela, fíjate en las medidas, el largo de las asas y si aguanta el peso de la compra. Los detalles pequeños como hebillas y botones pueden soltarse, así que ten en cuenta la edad del niño que usará el accesorio y lee las instrucciones de lavado.</p></div></article><article class="katblock" id="kat-sengetoy-og-soveromstekstiler"><h3>Sengetøy og soveromstekstiler</h3><p>Dynetrekk og putevar må passe dyna og puta du har, og barnestørrelser varierer mer enn mange tror. Sjekk derfor målene i centimeter før du bestiller. Bomull og bomullsblandinger kjennes ulike ut og krymper ulikt, så les vaskeanvisningen. Lukking med knapper, trykknapper eller glidelås påvirker hvor raskt trekket er å skifte. På et barnerom kan det være praktisk med to sett, slik at ett alltid er rent.</p><div class="katES" lang="es"><h4>Ropa de cama y textiles de dormitorio</h4><p>Las fundas nórdicas y de almohada deben corresponder al edredón y la almohada que tienes, y las medidas infantiles varían más de lo que muchos creen. Por eso, revisa las medidas en centímetros antes de pedir. El algodón y sus mezclas se sienten distinto y encogen de forma diferente, así que consulta la etiqueta de lavado. El cierre con botones, broches o cremallera influye en lo rápido que se cambia la funda. Para un cuarto infantil puede ser práctico tener dos juegos.</p></div></article></div></section><!-- ml-legal-footer --><footer class="footer ml-legal-footer" lang="nb"><section class="ml-newsletter" id="nyhetsbrev" aria-labelledby="mlNlTitle"><style>.ml-newsletter{max-width:760px;margin:0 0 22px;padding:0 0 18px;border-bottom:1px solid rgba(127,127,127,.35)}.ml-newsletter h3{margin:0 0 10px;font-size:16px;color:inherit}.ml-newsletter fieldset{border:0;margin:0;padding:0;display:grid;gap:10px}.ml-nl-email{display:grid;gap:4px}.ml-nl-email input{max-width:360px;padding:10px;border:1px solid rgba(127,127,127,.6);background:#fff;color:#111;font:inherit}.ml-nl-consent{display:flex;gap:8px;align-items:flex-start;font-size:12px;line-height:1.5}.ml-nl-consent input{margin-top:3px;flex:0 0 auto}.ml-newsletter button{justify-self:start;padding:10px 16px;border:1px solid currentColor;background:transparent;color:inherit;font:inherit;cursor:pointer}.ml-newsletter fieldset:disabled{opacity:.6}.ml-newsletter fieldset:disabled button{cursor:not-allowed}.ml-nl-status{font-size:12px;margin:8px 0 0}.ml-nl-hp{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}</style><h3 id="mlNlTitle">Nyhetsbrev <span lang="es">/ Boletín</span></h3><form id="mlNewsletter" data-state="disabled" novalidate><fieldset disabled><label class="ml-nl-email"><span>E-post <span lang="es">/ Correo electrónico</span></span><input type="email" name="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="navn@eksempel.no"></label><input type="text" name="website" class="ml-nl-hp" tabindex="-1" autocomplete="off" aria-hidden="true"><label class="ml-nl-consent"><input type="checkbox" name="consent" value="yes"><span>Ja, jeg vil motta nyhetsbrev fra Ludispel på e-post med nyheter om leker, klær og tekstiler for barn og familie fra MARTINEZ LOZANO INTERNASJONAL HANDEL. Jeg kan når som helst trekke tilbake samtykket ved å bruke avmeldingslenken i e-posten. Les mer om behandlingen av personopplysninger i <a href="/personvern">personvernerklæringen</a>. Abonnementet er frivillig og ikke et vilkår for å handle. <span lang="es">Sí, quiero recibir por correo electrónico el boletín de Ludispel con novedades sobre juguetes, ropa y textiles para niños y familias de MARTINEZ LOZANO INTERNASJONAL HANDEL. Puedo retirar mi consentimiento en cualquier momento usando el enlace para darse de baja incluido en los correos. Consulta cómo tratamos tus datos en la <a href="/personvern">política de privacidad</a>. La suscripción es voluntaria y no es un requisito para comprar.</span></span></label><button type="submit">Meld meg på <span lang="es">/ Suscribirme</span></button></fieldset><p class="ml-nl-status" role="status" aria-live="polite">Påmelding til nyhetsbrevet åpner snart. <span lang="es">La suscripción al boletín abrirá pronto.</span></p></form></section><p><strong>Ludispel</strong> er et varemerke/markedsføringsnavn for Martinez Lozano Internasjonal Handel, org.nr 935 407 095 MVA.</p><p>Norbygata 19, 0187 Oslo, Norge · <a href="mailto:support@ludispel.no">support@ludispel.no</a></p><nav class="ml-legal-links" aria-label="Kundeinformasjon"><a href="/kjopsvilkar">Kjøpsvilkår</a> <a href="/angrerett">Angrerett</a> <a href="/angreskjema">Angreskjema</a> <a href="/personvern">Personvern</a> <a href="/cookies">Cookies</a> <a href="/frakt-og-levering">Frakt og levering</a> <a href="/slik-handler-du">Slik handler du</a> <a href="/reklamasjon">Reklamasjon</a> <a href="/garanti-og-reklamasjon">Garanti og reklamasjon</a> <a href="/faq">FAQ</a> <a href="/om-oss">Om oss</a> <a href="/kontakt">Kontakt</a> <a href="/blog/">Blogg</a></nav><p class="ml-legal-en" lang="nb">Priser i NOK inkl. 25 % MVA · Frakt 79 kr per ordre · 14 dagers angrerett · <a href="/kjopsvilkar">Kjøpsvilkår</a> · <a href="/angrerett">Angrerett</a> · <a href="/personvern">Personvern</a> · <a href="/kontakt">Kontakt</a></p><p class="ml-legal-en" lang="es">Ludispel es un nombre comercial de Martinez Lozano Internasjonal Handel (empresa individual noruega). Precios en NOK con 25 % de IVA incluido · Envío 79 kr por pedido · Derecho de desistimiento de 14 días · <a href="/kjopsvilkar">Condiciones de compra</a> · <a href="/angrerett">Desistimiento</a> · <a href="/personvern">Privacidad</a> · <a href="/kontakt">Contacto</a></p><p>© 2026 Ludispel</p></footer>
-<aside id="drawer" class="drawer"><div class="head"><b>Handlekurv</b><button class="ctrl" onclick="drawer.classList.remove('open')">Lukk</button></div><div class="bodycart" id="cart"></div><div class="foot"><div style="display:flex;justify-content:space-between;font-size:20px;font-weight:800;margin-bottom:12px"><span>Totalt</span><span id="total">0</span></div><button class="checkout">GÅ TIL KASSEN</button></div></aside>
+<nav class="site-nav" aria-label="Hovedmeny">
+ <a class="brand" href="/">Ludispel</a>
+ <div class="nav-actions">
+ <a class="nav-link" href="#alder">Alder</a>
+ <a class="nav-link" href="#shop">Produkter</a>
+ <a class="nav-link" href="#gaver">Gaver</a>
+ <a class="nav-link" href="/om-oss">Om oss</a>
+ <button id="cartBtn" class="ctrl" type="button">Handlekurv (<span id="count">0</span>)</button>
+ </div>
+</nav>
+
+<div class="trust-bar" role="region" aria-label="Fordeler">
+ <span>Frakt 79 kr</span>
+ <span>14 dagers angrerett</span>
+ <span class="pay-icons" aria-label="Betaling">Betaling: <span class="pay-pill">Visa</span><span class="pay-pill">Mastercard</span><span class="pay-pill">Stripe</span></span>
+</div>
+
+<section class="hero" aria-label="Forside">
+ <span class="blob blob-a" aria-hidden="true"></span>
+ <span class="blob blob-b" aria-hidden="true"></span>
+ <div class="hero-inner">
+ <p class="brand-mark">Ludispel</p>
+ <h1>Lek, lær og voks</h1>
+ <p class="lede">Myke farger og trygge valg – leker og barneklær for hverdagen i Norge. Priser i NOK inkl. 25&nbsp;% MVA.</p>
+ <div class="hero-ctas">
+ <a class="btn btn-primary" href="#shop">Se produktene</a>
+ <a class="btn btn-soft" href="#alder">Handle etter alder</a>
+ </div>
+ </div>
+</section>
+
+<section class="section tone-butter" id="alder">
+ <h2>Handle etter alder</h2>
+ <p class="sub">Finn noe som passer barnets stadium – fra første grep til store eventyr.</p>
+ <div class="panel-grid">
+ <a class="panel panel-0" href="#shop" data-age="0-2" onclick="setAge('0-2')">
+ <h3>0–2 år</h3>
+ <p>Babyklær, myke leker og første favoritter</p>
+ </a>
+ <a class="panel panel-1" href="#shop" data-age="3-5" onclick="setAge('3-5')">
+ <h3>3–5 år</h3>
+ <p>Lek og læring for barnehagealder</p>
+ </a>
+ <a class="panel panel-2" href="#shop" data-age="6+" onclick="setAge('6+')">
+ <h3>6+ år</h3>
+ <p>Klær, spill og gaver som vokser med dem</p>
+ </a>
+ </div>
+</section>
+
+<section class="section" id="shop">
+ <h2>Utvalgte produkter</h2>
+ <p class="sub">Reelt katalogutvalg med pris øverst. Filtrer etter kategori eller alder.</p>
+ <div class="filters" id="filters"></div>
+ <div class="products" id="products"></div>
+</section>
+
+<section class="section tone-sky" id="gaver">
+ <h2>Gaveidéer</h2>
+ <p class="sub">Små og store gleder – uten støy, med rom for lek.</p>
+ <div class="idea-grid">
+ <div class="idea">
+ <h3>Til den lille</h3>
+ <p>Bodyer, myke leker og første favoritter for 0–2 år.</p>
+ <a href="#shop" onclick="setAge('0-2')">Se gaver 0–2</a>
+ </div>
+ <div class="idea">
+ <h3>Til bursdag</h3>
+ <p>Leker og klær som passer 3–5 år – morsomt å åpne, fint å bruke.</p>
+ <a href="#shop" onclick="setAge('3-5')">Se gaver 3–5</a>
+ </div>
+ <div class="idea">
+ <h3>Til storebarn</h3>
+ <p>Klær, plakater og leker for 6+ – gaver som følger med i lek og hverdag.</p>
+ <a href="#shop" onclick="setAge('6+')">Se gaver 6+</a>
+ </div>
+ <div class="idea">
+ <h3>Til familien</h3>
+ <p>Handlenett, krus og tekstiler med Ludispel-preg til hjemmet.</p>
+ <a href="#shop" onclick="ageFilter='';f='Family';rf();rp();">Se familieprodukter</a>
+ </div>
+ </div>
+</section>
+
+<section class="section tone-blush" id="trygge-leker">
+ <h2>Trygge leker</h2>
+ <div class="safe-block">
+ <div>
+ <p class="sub" style="margin-bottom:0">Vi viser bare det som står på produktet – ingen påfunne sertifikater. Les alltid alder, advarsler og bruksanvisning før kjøp.</p>
+ <ul>
+ <li>Velg etter anbefalt alder på produktsiden og emballasjen.</li>
+ <li>Se etter CE-merking der det kreves for leketøy i EØS.</li>
+ <li>Hold små deler og emballasje borte fra små barn når produktet krever det.</li>
+ <li>Voksen tilsyn der produsenten ber om det.</li>
+ </ul>
+ <p style="margin:16px 0 0"><a class="btn btn-soft" href="/om-oss">Les mer om Ludispel</a></p>
+ </div>
+ <div class="safe-visual" aria-hidden="true">Lek<br>trygt</div>
+ </div>
+</section>
+
+<section class="section" id="kategorier" aria-label="Kategorier">
+ <h2>Kategorier</h2>
+ <p class="sub">Hva du bør se etter i hver kategori før du bestiller.</p>
+ <div class="katgrid">
+ <article class="katblock" id="kat-leker">
+ <h3>Leker</h3>
+ <p>Velg leker etter anbefalt alder og les alltid produktets sikkerhetsinformasjon. Kontroller CE-merking der det kreves, følg advarsler og bruksanvisning, og hold små deler og emballasje borte fra små barn når produktet krever det.</p>
+ </article>
+ <article class="katblock" id="kat-barneklaer">
+ <h3>Barneklær</h3>
+ <p>Barn vokser fort, så sammenlign størrelsestabellen med et plagg som sitter godt i dag. Se materialsammensetning og vaskeanvisning. På plagg til de minste: sjekk at hetta ikke har lange snorer.</p>
+ </article>
+ <article class="katblock" id="kat-babyklaer">
+ <h3>Babyklær</h3>
+ <p>Babystørrelser oppgis ofte i måneder, men vekt og lengde sier mer enn alder. Velg myke stoffer uten stive merkelapper mot huden, og praktiske lukkinger ved bleieskift.</p>
+ </article>
+ <article class="katblock" id="kat-familieklaer">
+ <h3>Familieklær</h3>
+ <p>Voksne og barn bruker ulike størrelsestabeller. Mål et plagg du allerede har, og sammenlign med tabellen for hver størrelse før du bestiller.</p>
+ </article>
+ <article class="katblock" id="kat-capser-vesker-og-tilbehor">
+ <h3>Capser, vesker og tilbehør</h3>
+ <p>Sjekk hodeomkrets for caps, mål og hankelengde for vesker, og tenk på alderen til barnet som skal bruke tilbehøret.</p>
+ </article>
+ <article class="katblock" id="kat-sengetoy-og-soveromstekstiler">
+ <h3>Sengetøy og soveromstekstiler</h3>
+ <p>Kontroller målene i centimeter før du bestiller. Les vaskeanvisningen – bomull og blandinger krymper ulikt.</p>
+ </article>
+ </div>
+</section>
+
+<footer class="site-footer ml-legal-footer" lang="nb">
+ <section class="ml-newsletter" id="nyhetsbrev" aria-labelledby="mlNlTitle">
+ <h3 id="mlNlTitle">Nyhetsbrev</h3>
+ <form id="mlNewsletter" data-state="disabled" novalidate>
+ <fieldset disabled>
+ <label class="ml-nl-email">
+ <span>E-post</span>
+ <input type="email" name="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="navn@eksempel.no">
+ </label>
+ <input type="text" name="website" class="ml-nl-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+ <label class="ml-nl-consent">
+ <input type="checkbox" name="consent" value="yes">
+ <span>Ja, jeg vil motta nyhetsbrev fra Ludispel på e-post med nyheter om leker, klær og tekstiler for barn og familie. Jeg kan når som helst trekke tilbake samtykket via avmeldingslenken. Les mer i <a href="/personvern">personvernerklæringen</a>. Abonnementet er frivillig.</span>
+ </label>
+ <button type="submit">Meld meg på</button>
+ </fieldset>
+ <p class="ml-nl-status" role="status" aria-live="polite">Påmelding til nyhetsbrevet åpner snart.</p>
+ </form>
+ </section>
+ <p><strong>Ludispel</strong> – leker og barneklær for Norge. Lek, lær og voks.</p>
+ <p>Norbygata 19, 0187 Oslo, Norge · <a href="mailto:support@ludispel.no">support@ludispel.no</a></p>
+ <nav class="ml-legal-links" aria-label="Kundeinformasjon">
+ <a href="/kjopsvilkar">Kjøpsvilkår</a>
+ <a href="/angrerett">Angrerett</a>
+ <a href="/angreskjema">Angreskjema</a>
+ <a href="/personvern">Personvern</a>
+ <a href="/cookies">Cookies</a>
+ <a href="/frakt-og-levering">Frakt og levering</a>
+ <a href="/slik-handler-du">Slik handler du</a>
+ <a href="/reklamasjon">Reklamasjon</a>
+ <a href="/garanti-og-reklamasjon">Garanti og reklamasjon</a>
+ <a href="/faq">FAQ</a>
+ <a href="/om-oss">Om oss</a>
+ <a href="/kontakt">Kontakt</a>
+ <a href="/blog/">Blogg</a>
+ </nav>
+ <p>Priser i NOK inkl. 25 % MVA · Frakt 79 kr per ordre · 14 dagers angrerett · Betaling med kort via Stripe</p>
+ <p>© 2026 Ludispel</p>
+</footer>
+
+<aside id="drawer" class="drawer" aria-label="Handlekurv">
+ <div class="head"><b>Handlekurv</b><button class="ctrl" type="button" onclick="drawer.classList.remove('open')">Lukk</button></div>
+ <div class="bodycart" id="cart"></div>
+ <div class="foot">
+ <div style="display:flex;justify-content:space-between;font-size:1.2rem;font-weight:800;margin-bottom:12px"><span>Totalt</span><span id="total">0</span></div>
+ <button class="checkout" type="button">GÅ TIL KASSEN</button>
+ </div>
+</aside>
+
 <script>
-let data=
-[
-{id:1,n:'T-skjorte til barn',c:'Kids',p:22},{id:2,n:'Hettegenser til barn',c:'Kids',p:39},{id:3,n:'Babybody',c:'Baby',p:24},{id:4,n:'Smekke',c:'Baby',p:14},{id:5,n:'Kopp',c:'Family',p:15},{id:6,n:'Handlenett',c:'Accessories',p:19},{id:7,n:'Plakat A3',c:'Family',p:18},{id:8,n:'Caps til barn',c:'Accessories',p:17}
-];
-const cats=['All','Kids','Baby','Family','Toys','Accessories'];const catNb={All:'Alle',Kids:'Barn',Family:'Familie',Toys:'Leker',Accessories:'Tilbehør'};
-const m={NO:{r:11.7,c:'NOK',l:'nb-NO',s:79,d:'5–20'},EU:{r:1,c:'EUR',l:'en-IE',s:7.9,d:'5–20'},PE:{r:4.05,c:'PEN',l:'es-PE',s:14,d:'10–25'}};
-let marketCode='NO',f='All',cartState={};
-const $=s=>document.querySelector(s), money=x=>new Intl.NumberFormat(m[marketCode].l,{style:'currency',currency:m[marketCode].c,maximumFractionDigits:0}).format(x*m[marketCode].r);
-function rf(){filters.innerHTML=cats.map(x=>`<button class="chip ${f===x?'active':''}" onclick="f='${x}';rf();rp()">${catNb[x]||x}</button>`).join('')}
-function rp(){const list=data.filter(x=>f==='All'||x.c===f);document.getElementById('products').innerHTML=list.length?list.map(x=>`<div class="card"><div class="visual">${x.image?'<img src="'+x.image+'" alt="'+x.n+'" loading="lazy" style="width:100%;height:100%;object-fit:cover">':(catNb[x.c]||x.c)}</div><div class="body"><div class="tag">${catNb[x.c]||x.c}</div><b>${x.n}</b><div class="price">${money(x.p)}</div><div class="muted" style="font-size:12px">${marketCode==='PE'?'Entrega 10–25 días hábiles':'Levering 5–20 virkedager'}</div><button class="add" onclick="add(${x.id})">LEGG I HANDLEKURVEN</button></div></div>`).join(''):(data.length?'<p class="muted">Ingen produkter i denne kategorien ennå.</p>':'<p class="muted" lang="nb">Produktene lastes inn. Vises ingenting, prøv igjen om litt. <span lang="es">Cargando productos…</span></p>')}
-function add(id){cartState[id]=(cartState[id]||0)+1;rc();drawer.classList.add('open')}
-function rc(){let t=0,n=0;document.getElementById('cart').innerHTML=Object.entries(cartState).map(([id,q])=>{let x=data.find(a=>a.id==id);t+=x.p*q;n+=q;return `<div class="item" data-id="${id}"><span>${x.n} × ${q}</span><b>${money(x.p*q)}</b></div>`}).join('')||'<p class="muted">Handlekurven er tom.</p>';if(n){const k=m[marketCode],fmt=new Intl.NumberFormat(k.l,{style:'currency',currency:k.c,maximumFractionDigits:2});document.getElementById('cart').insertAdjacentHTML('beforeend','<div class="item"><span>Frakt (standard · '+k.d+' virkedager)</span><b>'+fmt.format(k.s)+'</b></div><p class="muted" style="font-size:12px">Priser inkl. 25 % MVA. Totalpris vises i Stripe Checkout før betaling.</p>');t+=k.s/k.r}count.textContent=n;total.textContent=money(t)}
-document.getElementById('market').onchange=e=>{marketCode=e.target.value;rp();rc()};cartBtn.onclick=()=>drawer.classList.add('open');rf();rp();rc();
+/* Storefront: NOK only. Cart/checkout logic unchanged for Stripe compatibility. */
+let data = [];
+const cats = ['All', 'Kids', 'Baby', 'Family', 'Toys', 'Accessories'];
+const catNb = { All: 'Alle', Kids: 'Barn', Baby: 'Baby', Family: 'Familie', Toys: 'Leker', Accessories: 'Tilbehør' };
+const m = {
+ NO: { r: 11.7, c: 'NOK', l: 'nb-NO', s: 79, d: '5–20' },
+ EU: { r: 1, c: 'EUR', l: 'en-IE', s: 7.9, d: '5–20' },
+ PE: { r: 4.05, c: 'PEN', l: 'es-PE', s: 14, d: '10–25' }
+};
+let marketCode = 'NO', f = 'All', ageFilter = '', cartState = {};
+const $ = s => document.querySelector(s);
+const money = x => new Intl.NumberFormat(m[marketCode].l, { style: 'currency', currency: m[marketCode].c, maximumFractionDigits: 0 }).format(x * m[marketCode].r);
+
+function ageOf(item) {
+ const t = ((item.n || '') + ' ' + (item.c || '')).toLowerCase();
+ if (/\b(baby|bodysuit|body|0-3|3-6|6-12|12-18|plush|doll|teether|rattle|bib|smekke)\b/.test(t) || item.c === 'Baby') return '0-2';
+ if (/\b(preschool|montessori|3-5|toddler|barnehage)\b/.test(t)) return '3-5';
+ if (/\b(kids|barn|children|child|6\+|school)\b/.test(t) || item.c === 'Kids') return '6+';
+ if (item.c === 'Toys' || /toy|leke|educational|guitar|phone toys|puzzle/.test(t)) return '3-5';
+ return '6+';
+}
+function badgeFor(item) {
+ const age = ageOf(item);
+ const bits = [];
+ if (age) bits.push('<span class="badge badge-age">' + age + ' år</span>');
+ if (/gift|gave|poster|sticker|tote|mug|krus|plakat/.test(((item.n || '') + ' ' + (item.c || '')).toLowerCase())) {
+ bits.push('<span class="badge badge-gift">Gaveidé</span>');
+ }
+ if (item.c) bits.push('<span class="badge">' + (catNb[item.c] || item.c) + '</span>');
+ return bits.join('');
+}
+function matchesAge(item) {
+ if (!ageFilter) return true;
+ return ageOf(item) === ageFilter;
+}
+function setAge(a) {
+ ageFilter = a || '';
+ f = 'All';
+ rf();
+ rp();
+ const shop = document.getElementById('shop');
+ if (shop) shop.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function rf() {
+ const ageChips = [
+ { id: '', label: 'Alle aldre' },
+ { id: '0-2', label: '0–2' },
+ { id: '3-5', label: '3–5' },
+ { id: '6+', label: '6+' }
+ ].map(x => '<button type="button" class="chip ' + (ageFilter === x.id ? 'active' : '') + '" onclick="setAge(\'' + x.id + '\')">' + x.label + '</button>').join('');
+ const catChips = cats.map(x => '<button type="button" class="chip ' + (f === x && !ageFilter ? 'active' : (f === x ? 'active' : '')) + '" onclick="ageFilter=\'\';f=\'' + x + '\';rf();rp()">' + (catNb[x] || x) + '</button>').join('');
+ filters.innerHTML = ageChips + catChips;
+}
+function rp() {
+ const list = data.filter(x => (f === 'All' || x.c === f) && matchesAge(x));
+ document.getElementById('products').innerHTML = list.length
+ ? list.map(x => {
+ const img = x.image
+ ? '<img src="' + x.image + '" alt="' + String(x.n).replace(/"/g, '&quot;') + '" loading="lazy" width="400" height="400">'
+ : '';
+ return '<article class="card">' +
+ '<div class="visual"><div class="badge-row">' + badgeFor(x) + '</div>' + (img || '<span class="tag" style="place-self:center">' + (catNb[x.c] || x.c) + '</span>') + '</div>' +
+ '<div class="body">' +
+ '<div class="price">' + money(x.p) + '</div>' +
+ '<p class="card-title">' + x.n + '</p>' +
+ '<div class="tag">' + (catNb[x.c] || x.c) + '</div>' +
+ '<div class="muted" style="font-size:12px">Levering ' + m[marketCode].d + ' virkedager</div>' +
+ '<button type="button" class="add" onclick="add(' + x.id + ')">LEGG I HANDLEKURVEN</button>' +
+ '</div></article>';
+ }).join('')
+ : (data.length
+ ? '<p class="muted">Ingen produkter i dette utvalget ennå. Prøv en annen alder eller kategori.</p>'
+ : '<p class="muted">Produktene lastes inn. Vises ingenting, prøv igjen om litt.</p>');
+}
+function add(id) {
+ cartState[id] = (cartState[id] || 0) + 1;
+ rc();
+ drawer.classList.add('open');
+}
+function rc() {
+ let t = 0, n = 0;
+ document.getElementById('cart').innerHTML = Object.entries(cartState).map(([id, q]) => {
+ const x = data.find(a => a.id == id);
+ if (!x) return '';
+ t += x.p * q;
+ n += q;
+ return '<div class="item" data-id="' + id + '"><span>' + x.n + ' × ' + q + '</span><b>' + money(x.p * q) + '</b></div>';
+ }).join('') || '<p class="muted">Handlekurven er tom.</p>';
+ if (n) {
+ const k = m[marketCode];
+ const fmt = new Intl.NumberFormat(k.l, { style: 'currency', currency: k.c, maximumFractionDigits: 2 });
+ document.getElementById('cart').insertAdjacentHTML('beforeend',
+ '<div class="item"><span>Frakt (standard · ' + k.d + ' virkedager)</span><b>' + fmt.format(k.s) + '</b></div>' +
+ '<p class="muted" style="font-size:12px">Priser inkl. 25 % MVA. Totalpris vises i Stripe Checkout før betaling.</p>');
+ t += k.s / k.r;
+ }
+ count.textContent = n;
+ total.textContent = money(t);
+}
+cartBtn.onclick = () => drawer.classList.add('open');
+rf();
+rp();
+rc();
 </script>
 
-<script src="supplier-bridge.js"></script><script>loadNordicCatalog({query:"kids clothing",category:"Barn og familie",cjLocalFallback:false,cjExclude:"\\b(toys?|montessori|puzzles?|building blocks?|plush|dolls?|rattles?|teethers?|games?)\\b",catMap:{"kids apparel":"Kids","baby apparel":"Baby","apparel":"Family","bags":"Accessories","baby":"Baby","barn":"Kids","familie":"Family","leker":"Toys"}});</script>
+<script src="supplier-bridge.js"></script>
+<script>
+loadNordicCatalog({
+ query: "kids clothing",
+ category: "Barn og familie",
+ cjLocalFallback: true,
+ catMap: {
+ "kids apparel": "Kids",
+ "baby apparel": "Baby",
+ "apparel": "Family",
+ "bags": "Accessories",
+ "baby": "Baby",
+ "barn": "Kids",
+ "familie": "Family",
+ "leker": "Toys",
+ "educational": "Toys",
+ "mugs": "Family",
+ "posters": "Family",
+ "stationery": "Accessories",
+ "accessories": "Accessories"
+ }
+});
+</script>
 <script src="variant-picker.js"></script>
 <script src="commerce-runtime.js"></script>
 <script src="newsletter.js" defer></script>
-</body></html>
+</body>
+</html>
