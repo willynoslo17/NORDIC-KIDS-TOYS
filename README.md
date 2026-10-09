@@ -4,6 +4,8 @@ Storefront brand: **Ludispel** · https://ludispel.no/ · Ludispel er et varemer
 
 Static storefront for Norway, Europe and Peru.
 
+- **Perú (`/pe/`)**: Spanish Lima look, toys-only catalog from the reviewed local snapshot (`pe/catalog/toys.json`), checkout off, Yape/Plin «próximamente», legal pages + Libro de Reclamaciones → `support@ludispel.no`. Does not call the live supplier API. Norway root storefront is unchanged.
+
 ## Supplier integration
 
 - `/api/cj-products` returns live CJ Dropshipping product candidates.
