@@ -37,10 +37,12 @@
  </div>
 </nav>
 
-<div class="trust-bar" role="region" aria-label="Fordeler">
- <span>Frakt 79 kr</span>
+<div class="trust-bar" role="region" aria-label="Tillitssignaler">
  <span>14 dagers angrerett</span>
- <span class="pay-icons" aria-label="Betaling">Betaling: <span class="pay-pill">Visa</span><span class="pay-pill">Mastercard</span><span class="pay-pill">Stripe</span></span>
+ <span>Frakt 79 kr · levering 5–20 virkedager</span>
+ <span>Trygg betaling med kort</span>
+ <span>Kundeservice på norsk</span>
+ <span class="pay-icons" aria-label="Betaling">Visa · Mastercard · Stripe</span>
 </div>
 
 <section class="hero" aria-label="Forside">
@@ -177,24 +179,24 @@
  <p class="ml-nl-status" role="status" aria-live="polite">Påmelding til nyhetsbrevet åpner snart.</p>
  </form>
  </section>
- <p><strong>Ludispel</strong> – leker og barneklær for Norge. Lek, lær og voks.</p>
+ <p><strong>Ludispel</strong> er et varemerke/markedsføringsnavn for <strong>MARTINEZ LOZANO INTERNASJONAL HANDEL</strong>, org.nr 935 407 095 MVA.</p>
  <p>Norbygata 19, 0187 Oslo, Norge · <a href="mailto:support@ludispel.no">support@ludispel.no</a></p>
  <nav class="ml-legal-links" aria-label="Kundeinformasjon">
  <a href="/kjopsvilkar">Kjøpsvilkår</a>
  <a href="/angrerett">Angrerett</a>
  <a href="/angreskjema">Angreskjema</a>
  <a href="/personvern">Personvern</a>
- <a href="/cookies">Cookies</a>
+ <a href="/cookies">Informasjonskapsler</a>
  <a href="/frakt-og-levering">Frakt og levering</a>
  <a href="/slik-handler-du">Slik handler du</a>
  <a href="/reklamasjon">Reklamasjon</a>
  <a href="/garanti-og-reklamasjon">Garanti og reklamasjon</a>
- <a href="/faq">FAQ</a>
+ <a href="/faq">Ofte stilte spørsmål</a>
  <a href="/om-oss">Om oss</a>
  <a href="/kontakt">Kontakt</a>
  <a href="/blog/">Blogg</a>
  </nav>
- <p>Priser i NOK inkl. 25 % MVA · Frakt 79 kr per ordre · 14 dagers angrerett · Betaling med kort via Stripe</p>
+ <p>Priser i NOK inkl. 25 % MVA · Frakt 79 kr per ordre · 14 dagers angrerett · Trygg betaling med kort · Kundeservice på norsk</p>
  <p>© 2026 Ludispel</p>
 </footer>
 
@@ -208,14 +210,12 @@
 </aside>
 
 <script>
-/* Storefront: NOK only. Cart/checkout logic unchanged for Stripe compatibility. */
+/* Storefront: NOK only (Norwegian storefront). */
 let data = [];
 const cats = ['All', 'Kids', 'Baby', 'Family', 'Toys', 'Accessories'];
 const catNb = { All: 'Alle', Kids: 'Barn', Baby: 'Baby', Family: 'Familie', Toys: 'Leker', Accessories: 'Tilbehør' };
 const m = {
- NO: { r: 11.7, c: 'NOK', l: 'nb-NO', s: 79, d: '5–20' },
- EU: { r: 1, c: 'EUR', l: 'en-IE', s: 7.9, d: '5–20' },
- PE: { r: 4.05, c: 'PEN', l: 'es-PE', s: 14, d: '10–25' }
+ NO: { r: 11.7, c: 'NOK', l: 'nb-NO', s: 79, d: '5–20' }
 };
 let marketCode = 'NO', f = 'All', ageFilter = '', cartState = {};
 const $ = s => document.querySelector(s);
@@ -262,14 +262,12 @@ function rf() {
  filters.innerHTML = ageChips + catChips;
 }
 function rp() {
- const list = data.filter(x => (f === 'All' || x.c === f) && matchesAge(x));
+ const list = data.filter(x => x.image && (f === 'All' || x.c === f) && matchesAge(x));
  document.getElementById('products').innerHTML = list.length
  ? list.map(x => {
- const img = x.image
- ? '<img src="' + x.image + '" alt="' + String(x.n).replace(/"/g, '&quot;') + '" loading="lazy" width="400" height="400">'
- : '';
+ const img = '<img src="' + x.image + '" alt="' + String(x.n).replace(/"/g, '&quot;') + '" loading="lazy" width="400" height="400">';
  return '<article class="card">' +
- '<div class="visual"><div class="badge-row">' + badgeFor(x) + '</div>' + (img || '<span class="tag" style="place-self:center">' + (catNb[x.c] || x.c) + '</span>') + '</div>' +
+ '<div class="visual"><div class="badge-row">' + badgeFor(x) + '</div>' + img + '</div>' +
  '<div class="body">' +
  '<div class="price">' + money(x.p) + '</div>' +
  '<p class="card-title">' + x.n + '</p>' +
@@ -301,7 +299,7 @@ function rc() {
  const fmt = new Intl.NumberFormat(k.l, { style: 'currency', currency: k.c, maximumFractionDigits: 2 });
  document.getElementById('cart').insertAdjacentHTML('beforeend',
  '<div class="item"><span>Frakt (standard · ' + k.d + ' virkedager)</span><b>' + fmt.format(k.s) + '</b></div>' +
- '<p class="muted" style="font-size:12px">Priser inkl. 25 % MVA. Totalpris vises i Stripe Checkout før betaling.</p>');
+ '<p class="muted" style="font-size:12px">Priser inkl. 25 % MVA. Totalpris vises i kassen før betaling.</p>');
  t += k.s / k.r;
  }
  count.textContent = n;

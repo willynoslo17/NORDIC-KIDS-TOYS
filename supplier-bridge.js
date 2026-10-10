@@ -68,6 +68,161 @@
     printful: "#2563eb"
   };
 
+  /* Non-toy POD catalog noise – never show on Ludispel. */
+  const HIDDEN_NAME_RX = /^(car magnets|kiss-cut vinyl decals|luggage tag|rubber case for airpods®?)$/i;
+  const HIDDEN_NAME_PARTS = [/car magnets/i, /kiss-cut vinyl decals/i, /\bluggage tag\b/i, /rubber case for airpods/i];
+
+  /** Optional CSV overrides: /bench/norwegian-titles.csv (store=ludispel, columns id/sku/name_en → norwegian_title). */
+  const TITLE_BY_ID = Object.create(null);
+  const TITLE_BY_SKU = Object.create(null);
+  const TITLE_BY_EN = Object.create(null);
+  let titlesReady = null;
+
+  function parseTitlesCsv(text) {
+    const lines = String(text || "").split(/\r?\n/).filter(Boolean);
+    if (lines.length < 2) return;
+    const headers = lines[0].split(",").map(h => h.trim().toLowerCase().replace(/^"|"$/g, ""));
+    const idx = (name) => headers.indexOf(name);
+    const iStore = idx("store");
+    const iTitle = idx("norwegian_title");
+    const iId = idx("id") >= 0 ? idx("id") : idx("pid");
+    const iSku = idx("sku");
+    const iEn = idx("name_en") >= 0 ? idx("name_en") : idx("nameen");
+    if (iTitle < 0) return;
+    const split = (line) => {
+      const out = [];
+      let cur = "", q = false;
+      for (let i = 0; i < line.length; i++) {
+        const c = line[i];
+        if (c === '"') { q = !q; continue; }
+        if (c === "," && !q) { out.push(cur); cur = ""; continue; }
+        cur += c;
+      }
+      out.push(cur);
+      return out;
+    };
+    for (let n = 1; n < lines.length; n++) {
+      const cols = split(lines[n]);
+      const store = iStore >= 0 ? String(cols[iStore] || "").trim().toLowerCase() : "ludispel";
+      if (store && store !== "ludispel" && store !== "nordic-kids-toys" && store !== "kids") continue;
+      const title = String(cols[iTitle] || "").trim();
+      if (!title) continue;
+      if (iId >= 0 && cols[iId]) TITLE_BY_ID[String(cols[iId]).trim()] = title;
+      if (iSku >= 0 && cols[iSku]) TITLE_BY_SKU[String(cols[iSku]).trim().toLowerCase()] = title;
+      if (iEn >= 0 && cols[iEn]) TITLE_BY_EN[String(cols[iEn]).trim().toLowerCase()] = title;
+    }
+  }
+
+  function loadNorwegianTitles() {
+    if (titlesReady) return titlesReady;
+    titlesReady = fetch("/bench/norwegian-titles.csv", { cache: "no-store" })
+      .then(r => (r.ok ? r.text() : ""))
+      .then(parseTitlesCsv)
+      .catch(() => {});
+    return titlesReady;
+  }
+
+  /**
+   * Customer-facing Norwegian titles. CJ winners already ship Norwegian names;
+   * Printify/Printful often return English — never show those as-is.
+   */
+  function toNorwegianTitle(raw, meta) {
+    const id = meta && (meta.id || meta.externalId || meta.gelatoProductUid || meta.printfulProductId || meta.printifyProductId);
+    const sku = meta && meta.sku;
+    const en = String((meta && (meta.nameEn || meta.name_en)) || raw || "").trim().toLowerCase();
+    if (id && TITLE_BY_ID[String(id)]) return TITLE_BY_ID[String(id)];
+    if (sku && TITLE_BY_SKU[String(sku).toLowerCase()]) return TITLE_BY_SKU[String(sku).toLowerCase()];
+    if (en && TITLE_BY_EN[en]) return TITLE_BY_EN[en];
+
+    let s = String(raw || "").replace(/\s+/g, " ").trim();
+    if (!s) return "Produkt";
+    const looksNb = /[æøåÆØÅ]/.test(s) || /\b(krus|plakat|handlenett|notatbok|klistremerke|hettegenser|t-skjorte|body|smekke|pyjamas|genser|bukse|kjole|leke|kosedyr|barne|baby|familie)\b/i.test(s);
+    const looksEn = /\b(mug|poster|tote|notebook|sticker|hoodie|tee|t-shirt|bodysuit|kids|youth|baby|all-over print|organic cotton|crew neck|swimsuit|leggings|rash guard)\b/i.test(s);
+    if (looksNb && !looksEn) return s;
+
+    const phrases = [
+      [/ludispel ["']play\.?\s*learn\.?\s*grow\.?["'] poster a3/gi, "Ludispel-plakat «Lek, lær og voks» A3"],
+      [/ludispel rainbow art poster a3/gi, "Ludispel regnbueplakat A3"],
+      [/ludispel rainbow logo mug 11oz/gi, "Ludispel-krus med regnbuelogo (11 oz)"],
+      [/ludispel rainbow pattern mug 11oz/gi, "Ludispel-krus med regnbuemønster (11 oz)"],
+      [/ludispel organic cotton tote/gi, "Ludispel-handlenett i økologisk bomull"],
+      [/ludispel dot-?grid notebook/gi, "Ludispel prikkemønster-notatbok"],
+      [/ludispel rainbow vinyl sticker/gi, "Ludispel regnbueklistremerke i vinyl"],
+      [/ludispel rainbow kids tee\s*[–—-]\s*white\s*[·•]\s*/gi, "Ludispel barne-t-skjorte med regnbue – hvit · "],
+      [/ludispel rainbow organic baby bodysuit\s*[–—-]\s*white\s*[·•]\s*/gi, "Ludispel babybody i økologisk bomull – hvit · "],
+      [/ludispel rainbow tee\s*[–—-]\s*white\s*[·•]\s*/gi, "Ludispel t-skjorte med regnbue – hvit · "],
+      [/all-over print kids cotton crew neck t-?shirts?/gi, "Barne-t-skjorte i bomull med heldekkende trykk"],
+      [/all-over print kids crew neck t-?shirts?/gi, "Barne-t-skjorte med heldekkende trykk"],
+      [/all-over print kids leggings/gi, "Barneleggings med heldekkende trykk"],
+      [/all-over print kids rash guard/gi, "Barne-UV-trøye med heldekkende trykk"],
+      [/all-over print kids swimsuit/gi, "Barnebadedrakt med heldekkende trykk"],
+      [/all-over print kids sports jersey/gi, "Barneidrettstrøye med heldekkende trykk"],
+      [/all-over print youth cotton crew neck t-?shirts?/gi, "Ungdoms-t-skjorte i bomull med heldekkende trykk"],
+      [/all-over print youth crew neck t-?shirts?/gi, "Ungdoms-t-skjorte med heldekkende trykk"],
+      [/all-over print youth leggings/gi, "Ungdomsleggings med heldekkende trykk"],
+      [/all-over print youth rash guard/gi, "Ungdoms-UV-trøye med heldekkende trykk"],
+      [/all-over print youth recycled basketball jersey/gi, "Ungdoms basketballtrøye med heldekkende trykk"],
+      [/all-over print youth recycled mesh shorts/gi, "Ungdomsshorts i mesh med heldekkende trykk"],
+      [/all-over print youth recycled sports jersey/gi, "Ungdomsidrettstrøye med heldekkende trykk"],
+      [/all-over print youth swimsuit/gi, "Ungdomsbadedrakt med heldekkende trykk"],
+      [/baby jersey bodysuit.*/gi, "Babybody i jersey"],
+      [/baby jersey t-?shirt.*/gi, "Baby-t-skjorte i jersey"],
+      [/organic cotton baby bodysuit.*/gi, "Babybody i økologisk bomull"],
+      [/baby short sleeve one piece.*/gi, "Babybody med korte ermer"],
+      [/baby staple tee.*/gi, "Baby-t-skjorte"],
+      [/toddler staple tee.*/gi, "Toddler-t-skjorte"],
+      [/youth staple tee.*/gi, "Ungdoms-t-skjorte"],
+      [/youth long sleeve tee.*/gi, "Ungdoms-t-skjorte med lange ermer"],
+      [/youth garment-dyed lightweight hooded sweatshirt.*/gi, "Lett hettegenser til ungdom"],
+      [/youth garment-dyed heavyweight t-?shirt.*/gi, "Solid ungdoms-t-skjorte"],
+      [/kids fleece hoodie.*/gi, "Barnehettegenser i fleece"],
+      [/youth classic tee.*/gi, "Klassisk ungdoms-t-skjorte"],
+      [/youth sports tee.*/gi, "Ungdoms sport-t-skjorte"],
+      [/youth heavy blend hoodie.*/gi, "Ungdomshettegenser"],
+      [/kids crew neck sweatshirt.*/gi, "Barnegenser med rund hals"],
+      [/kids organic cotton mini creator.*/gi, "Barne-t-skjorte i økologisk bomull"],
+      [/all-over print/gi, "heldekkende trykk"],
+      [/organic cotton tote/gi, "handlenett i økologisk bomull"],
+      [/vinyl sticker/gi, "vinylklistremerke"],
+      [/dot-?grid notebook/gi, "prikkemønster-notatbok"],
+      [/crew neck/gi, "rund hals"],
+      [/rash guard/gi, "UV-trøye"],
+      [/swimsuit/gi, "badedrakt"],
+      [/bodysuit/gi, "body"],
+      [/leggings/gi, "leggings"],
+      [/hoodie/gi, "hettegenser"],
+      [/sweatshirt/gi, "genser"],
+      [/t-?shirts?/gi, "t-skjorte"],
+      [/\btees?\b/gi, "t-skjorte"],
+      [/\bmugs?\b/gi, "krus"],
+      [/\bposters?\b/gi, "plakat"],
+      [/\bnotebooks?\b/gi, "notatbok"],
+      [/\bstickers?\b/gi, "klistremerke"],
+      [/\btotes?\b/gi, "handlenett"],
+      [/\bkids\b/gi, "barn"],
+      [/\byouth\b/gi, "ungdom"],
+      [/\bbaby\b/gi, "baby"],
+      [/\btoddler\b/gi, "toddler"],
+      [/\bwhite\b/gi, "hvit"],
+      [/printful product/gi, "Produkt"],
+      [/supplier product/gi, "Produkt"]
+    ];
+    for (const [re, rep] of phrases) s = s.replace(re, rep);
+    s = s.replace(/\s{2,}/g, " ").replace(/\s+[|].*$/, "").replace(/^[,·\-\s]+|[,·\-\s]+$/g, "").trim();
+    if (!s) return "Produkt";
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
+  function isHiddenProduct(item) {
+    const names = [
+      item && item.name,
+      item && item.nameEn,
+      item && item.title
+    ].map(n => String(n || "").trim()).filter(Boolean);
+    if (!names.length) return false;
+    return names.some(name => HIDDEN_NAME_RX.test(name) || HIDDEN_NAME_PARTS.some(rx => rx.test(name)));
+  }
+
   window.nordicCatalogs = { cj: [], printify: [], gelato: [], printful: [] };
   window.nordicActiveSupplier = "cj";
 
@@ -94,19 +249,21 @@
        the UI uses their last 15 digits and the full id stays a string in externalId / cjPid. */
     const tail = /^\d+$/.test(rawId) ? (Number.isSafeInteger(Number(rawId)) ? Number(rawId) : Number(rawId.slice(-15))) : 0;
     const numericId = tail > 0 ? tail : null;
+    const rawName = item.name || item.nameEn || "";
     const out = {
       id: numericId != null ? numericId : baseId + index,
       externalId: String(item.id || item.gelatoProductUid || item.printfulProductId || item.printifyProductId || ""),
-      name: item.name || (LABELS[provider] || "Supplier") + " product",
+      name: toNorwegianTitle(rawName, item),
+      nameEn: item.nameEn || rawName || "",
       cat: item.category || item.cat || category,
       base: nok > 0 ? nok / NOK_PER_EUR : 0,
       priceNok: nok,
       v: "v" + ((index % 4) + 1),
-      tag: LABELS[provider] || provider,
-      brand: item.brand || LABELS[provider] || provider,
+      tag: "",
+      brand: "Ludispel",
       image: item.image || "",
       sku: item.sku || "",
-      supplier: item.supplier || LABELS[provider] || provider,
+      supplier: provider,
       provider: provider,
       badgeColor: BRAND_COLORS[provider] || "#334155"
     };
@@ -252,9 +409,9 @@
     return raw;
   }
 
-  /* Storefront rule (owner, 2026-10-02): every product that has an image is shown. */
+  /* Storefront rule: image required; hide non-toy POD junk (magnets, decals, luggage tags, AirPods cases). */
   function storefrontItem() {
-    return item => Boolean(item && item.image);
+    return item => Boolean(item && item.image && !isHiddenProduct(item));
   }
 
   /** One grid with every supplier (fixed order); only the very same product (supplier + id) is listed once. */
@@ -288,7 +445,7 @@
     }
     /* Keep the customer's chosen category filter while more products arrive (reset only if it no longer exists). */
     const cats = new Set(list.map(x => x.cat));
-    if (typeof filter !== "undefined") { try { if (filter !== "All" && filter !== "Todos" && !cats.has(filter)) filter = "All"; } catch (_) {} }
+    if (typeof filter !== "undefined") { try { if (filter !== "All" && !cats.has(filter)) filter = "All"; } catch (_) {} }
     if (typeof f !== "undefined") { try { if (f !== "All" && !cats.has(f)) f = "All"; } catch (_) {} }
     if (typeof renderFilters === "function") renderFilters();
     else if (typeof rf === "function") rf();
@@ -310,12 +467,17 @@
     const cfg = config || {};
     const category = cfg.category || "General";
     const query = cfg.query || "";
+    await loadNorwegianTitles();
     const keep = storefrontItem();
+    /* Gelato often returns 503 / empty products[] without a store ID — never block the grid. */
+    const gelatoLoader = cfg.gelato === false
+      ? Promise.resolve([])
+      : loadPodCatalog("gelato", category, query).catch(() => []);
     const loaders = {
       cj: cfg.cj === false ? Promise.resolve([]) : loadCjSelected(cfg), // store opted out of CJ: no request
-      printify: loadPodCatalog("printify", category, query),
-      gelato: loadPodCatalog("gelato", category, query),
-      printful: loadPodCatalog("printful", category, query)
+      printify: cfg.printify === false ? Promise.resolve([]) : loadPodCatalog("printify", category, query),
+      gelato: gelatoLoader,
+      printful: cfg.printful === false ? Promise.resolve([]) : loadPodCatalog("printful", category, query)
     };
     window.nordicCatalogs = { cj: [], printify: [], gelato: [], printful: [] };
     /* Render each supplier as soon as it answers (or falls back after its timeout). */

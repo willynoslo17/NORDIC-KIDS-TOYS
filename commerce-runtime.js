@@ -143,7 +143,7 @@
       const notice = document.createElement("p");
       notice.id = "nordicPriceNotice";
       notice.style.cssText = "font-size:12px;line-height:1.5;opacity:.72;margin:0 0 14px";
-      notice.innerHTML = 'Alle priser i NOK er inkl. 25 % MVA. Frakt 79 kr per ordre i Norge. Totalpris vises før betaling. <a href="/frakt-og-levering">Leveringstid</a> · <a href="/angrerett">14 dagers angrerett</a>. Betaling med kort via Stripe.';
+      notice.innerHTML = 'Alle priser i NOK er inkl. 25 % MVA. Frakt 79 kr per ordre · levering 5–20 virkedager. <a href="/frakt-og-levering">Frakt og levering</a> · <a href="/angrerett">14 dagers angrerett</a> · trygg betaling med kort · kundeservice på norsk.';
       grid.parentNode.insertBefore(notice, grid);
     }
     /* Homepage already embeds OnlineStore JSON-LD; avoid a second PE/EUR schema. */
@@ -175,7 +175,11 @@
   function enhanceCheckout() {
     if (!CHECKOUT_ENABLED) {
       const trigger = document.querySelector(".drawer .checkout");
-      if (trigger) { trigger.disabled = true; trigger.onclick = null; }
+      if (trigger) {
+        trigger.disabled = true;
+        trigger.onclick = null;
+        trigger.textContent = "Betaling kommer snart";
+      }
       const pausedForm = document.getElementById("checkoutForm");
       if (pausedForm) pausedForm.onsubmit = event => { event.preventDefault(); };
       return;
@@ -199,7 +203,7 @@
     form.dataset.enhanced = "true";
     const button = form.querySelector('[type="submit"]');
     button.textContent = "BETAL SIKKERT MED STRIPE";
-    const summary = '<div class="full notice nordic-precontract">Du sendes til Stripe Checkout for sikker betaling. Selger: '+BRAND+' (Martinez Lozano Internasjonal Handel, org.nr 935 407 095 MVA). Totalpris inkl. 25 % MVA og frakt (79 kr i Norge) vises før du betaler. Estimert levering 5–20 virkedager. 14 dagers angrerett – du betaler selv returfrakten. Betaling med kort via Stripe.</div>';
+    const summary = '<div class="full notice nordic-precontract">Du sendes til en sikker kasse for betaling. Selger: '+BRAND+' (MARTINEZ LOZANO INTERNASJONAL HANDEL, org.nr 935 407 095 MVA, Oslo). Totalpris inkl. 25 % MVA og frakt (79 kr i Norge) vises før du betaler. Estimert levering 5–20 virkedager. 14 dagers angrerett – du betaler selv returfrakten. Trygg betaling med kort.</div>';
     const oldNotice = form.querySelector(".notice");
     if (oldNotice) oldNotice.outerHTML = summary; else button.insertAdjacentHTML("beforebegin", summary);
     const L = (href, text) => '<a href="'+href+'" target="_blank" rel="noopener">'+text+'</a>';
