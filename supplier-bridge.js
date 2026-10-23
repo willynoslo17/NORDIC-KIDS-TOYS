@@ -39,7 +39,6 @@
     printful: "catalog/printful-products.json"
   };
   const ID_BASE = { cj: 10001, printify: 20001, gelato: 30001, printful: 40001 };
-  const LABELS = { cj: "CJ", printify: "Printify", gelato: "Gelato", printful: "Printful" };
   /** A slow supplier endpoint never blocks the grid: after this many ms its local fallback is used instead. */
   const SOURCE_TIMEOUT_MS = 8000;
   /** Gelato (live prices from the Gelato API) loads in the background and may take longer; it never delays readiness. */
@@ -329,7 +328,7 @@
         if (Array.isArray(payload.products) && payload.products.length) {
           return payload.products
             .filter(allowed)
-            .map((item, index) => curated({ ...item, brand: item.brand || "CJ Dropshipping", supplier: item.supplier || "CJ Dropshipping" }, index, config.category, "cj"))
+            .map((item, index) => curated(item, index, config.category, "cj"))
             .filter(item => item.base > 0)
             .slice(0, 600); // curated set (150) + trend winners
         }
