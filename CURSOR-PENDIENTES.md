@@ -10,7 +10,7 @@ Auditoría 2026-10-23 en la rama `cursor/ludispel-no-auditoria-2026-10`. Nada de
 - `docs/voec-mva-sjekkliste.md`: checklist sin cifras nuevas.
 - Enlaces internos de los `.html`: revisión por script, 21 páginas, ninguno roto (el destino existe como archivo, como `ruta.html` o como `ruta/index.html`).
 - `index.html` en Chrome (estático local): 30 tarjetas, sin excepciones JavaScript y sin nombres de proveedor en el texto. En la consola solo aparecen dos 404 de red, `/api/cj-products` y `/api/newsletter`, porque este entorno no ejecuta Pages Functions. En Cloudflare esas rutas existen; no se tocó `functions/`. El catálogo local de respaldo sí se pinta.
-- No hay `whatsapp` en el repo.
+- No hay menciones de la app de mensajería prohibida en el repo.
 - No hay secretos `sk_live_` / `sk_test_` / `ghp_` / `EAA` pegados en el código.
 - `functions/api/create-checkout-session.ts` no se ha modificado. La comprobación `startsWith("sk_live_")` sigue igual. `CHECKOUT_ENABLED` sigue en `false`.
 
@@ -34,3 +34,10 @@ Auditoría 2026-10-23 en la rama `cursor/ludispel-no-auditoria-2026-10`. Nada de
 - No crear ni descargar imágenes. SuperGrok: ninguno (el prompt lo da por verificado el 2026-10-22).
 - No renombrar el repo.
 - No tocar `netlify.toml`, `_redirects` ni `functions/`.
+
+## Verificación local (2026-10-23, continuación en local tras corte del agente)
+
+- Enlaces internos de todos los `.html`: comprobados con script, 0 rotos.
+- `index.html` cargado en Chrome headless con servidor estático: sin errores de JavaScript. Solo 404 de `/api/cj-products` y `/api/newsletter` (Pages Functions, no existen en un servidor estático local; esperado).
+- `node --check` en los `.js` de la raíz: OK. No hay `package.json` ni build.
+- Búsqueda de claves `sk_live_`/`sk_test_`/`ghp_`/`EAA`: vacía. `create-checkout-session.ts` sin cambios respecto a `main`.
